@@ -2,6 +2,10 @@
 
 **Enterprise SaaS Application Platform**
 
+**_⚠️ TEMPLATE REPOSITORY ONLY - ALL CHANGES FLOW DOWNSTREAM INTO OUR WEB APPS_**
+
+This repository contains a backup copy of the licensed [Gravity SaaS Boilerplate](https://usegravity.app/) for reference purposes only.
+
 MicroCODE Web App is our production-ready web and mobile application framework, customized from the Gravity SaaS Boilerplate for building enterprise-grade applications.
 
 ## Overview
