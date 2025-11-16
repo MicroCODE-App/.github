@@ -1,22 +1,22 @@
-# MicroCODE Web App
+# MicroCODE App Template
 
 **Enterprise SaaS Application Platform**
 
 **_⚠️ TEMPLATE REPOSITORY ONLY - ALL CHANGES FLOW DOWNSTREAM INTO OUR WEB APPS_**
 
-This repository contains a backup copy of the licensed [Gravity SaaS Boilerplate](https://usegravity.app/) for reference purposes only.
+This repository contains a working copy of the licensed [Gravity SaaS Boilerplate](https://usegravity.app/) that we have modified for bulding our Apps.
 
-MicroCODE Web App is our production-ready web and mobile application framework, customized from the Gravity SaaS Boilerplate for building enterprise-grade applications.
+MicroCODE App Template is our production-ready web and mobile application framework, customized from the Gravity SaaS Boilerplate for building enterprise-grade applications.
 
 ## Overview
 
-MicroCODE Web App serves as the foundation for all MicroCODE, Inc. SaaS products. It provides a battle-tested, feature-rich platform that eliminates boilerplate development and accelerates time-to-market for new applications.
+MicroCODE App Template serves as the foundation for all MicroCODE, Inc. SaaS products. It provides a battle-tested, feature-rich platform that eliminates boilerplate development and accelerates time-to-market for new applications.
 
 This is our **active development platform** - the customized derivative of the licensed Gravity boilerplate that we use to build production applications.
 
 ## Built From Gravity
 
-MicroCODE Web App is our enhanced version of the [Gravity SaaS Boilerplate](https://usegravity.app/) by Gravity Zero Ltd., with MicroCODE-specific customizations and enterprise features.
+MicroCODE App Template is our enhanced version of the [Gravity SaaS Boilerplate](https://usegravity.app/) by Gravity Zero Ltd., with MicroCODE-specific customizations and enterprise features.
 
 ### Core Gravity Features Included
 
@@ -184,14 +184,14 @@ This is an internal platform. Contributions should follow MicroCODE development 
 
 This GitHub Organization contains:
 
-- **microcode-web-app-core**: Core platform and framework
-- **microcode-web-app-frontend**: React web application base
-- **microcode-web-app-mobile**: React Native mobile app base
-- **microcode-web-app-api**: Backend API and services
-- **microcode-web-app-docs**: Platform documentation and guides
-- **microcode-web-app-cli**: CLI tools for scaffolding and management
-- **microcode-web-app-components**: Shared component library
-- **microcode-web-app-infra**: Deployment and infrastructure templates
+- **microcode-app-core**: Core platform and framework
+- **microcode-app-frontend**: React web application base
+- **microcode-app-mobile**: React Native mobile app base
+- **microcode-app-api**: Backend API and services
+- **microcode-app-docs**: Platform documentation and guides
+- **microcode-app-cli**: CLI tools for scaffolding and management
+- **microcode-app-components**: Shared component library
+- **microcode-app-infra**: Deployment and infrastructure templates
 
 ## Maintenance and Updates
 
