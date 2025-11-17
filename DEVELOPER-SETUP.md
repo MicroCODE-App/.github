@@ -2,16 +2,19 @@
 
 A SaaS template built from the Gravity App Boilerplate.
 
-This template was created from Kyle's GRAVITY-APP product in 2024, when MicroCODE `purchased` it and began modifications. This template combines the best features from `gravity-current` and `ladders` to serve as a common base for building new MicroCODE SaaS applications.
+This template was created from Kyle's GRAVITY-APP product in 2024, when MicroCODE `purchased` it and began modifications.
+This template combines the best features from `gravity-current` and `ladders` to serve as a common base for building new MicroCODE SaaS applications.
 
-This template includes all major features:
+This template will include all major features:
 
 - **Multi-Lingual Support (i18n)**
 - **Shadcn/UI Integration**
 - **Express 5 Compatibility**
 - **Enhanced Server Architecture** (SIG handling, graceful shutdown, port management)
-- **MicroCODE Package Suite** (mcode-\* packages)
-- **Bootstrap System** for environment initialization
+- **JSDoc Annotations** for automatic API documentation
+- **Swagger/OpenAPI Support** for API documentation and testing
+- **MicroCODE Packages** (mcode-\* packages)
+- **MicroCODE Bootstrap System** for environment initialization
 - **MongoDB \_id as Primary Key** (no secondary UUID)
 
 NOTE: For testing multiple Clients against one Server, remove this from `VITE Config`:
@@ -54,16 +57,47 @@ they had beautiful online documentation, and training...
 
 - MicroCODE purchased Gravity Training from Kyle, to access course: [Gravity Training Course](https://click.mlflow.com/link/c/YT0yMzg5NDM0OTg0Mzk5MTE1OTM3JmM9Zjd0NSZlPTQ2NzQ0NTIxJmI9OTczMTkwMTA1JmQ9cTFuNHoyeQ==.E8Etpdc01Kz2FeMURvW6oqmj9O6FqnopOVIiujHd1Z8)
 
-### Installing
+### Initial Setup
 
-- How/where to download your program
-- Any modifications needed to be made to files/folders
+1. Install MongoDB Community Edition
 
-- install all dependencies...
+   - [MongoDB Download Center](https://www.mongodb.com/try/download/community)
 
-```
-npm install
-```
+2. Install Node Version Manager (NVM)
+
+   - [NVM for Windows](https://github.com/coreybutler/nvm-windows)
+
+3. Install Node.js v22+
+
+   - Using NVM: `nvm install 22.24.0` (or later)
+   - Using NVM: `nvm use 22.24.0` (or later)
+
+4. Clone the MicroCODE App Template repository
+
+   - `git clone https://github.com/MicroCODE-App-Template/app-template.git`
+
+5. Create a shared `.env` file
+
+   - Clone `.env.example` to `.env.shared` in the root directory and fill in the required values
+   - Note: `DB_CLIENT` controls '`npm run setup`' behavior in Steps 6 and 7
+   - the `.env` files should never be committed to source control with real credentials!
+   - the `.env` files are ignored by `.gitignore` to prevent accidental commits, **_STORE them securely!_**
+   - the `.env` files are required for both `server` and `mission-control` directories.
+   - the `.env` files in `server` and `mission-control` must be identical.
+
+6. Created a `.env` file in the `server` directory
+
+   - Clone `.env.shared` to `.env` and fill in the required values
+
+7. Created a `.env` file in the `mission-control` directory
+
+   - Clone `.env.shared` to `.env` and fill in the required values
+
+8. Setup proper DB Models and Install NPM dependencies
+   - Move to the SERVER directory (`cd server`)
+   - Run the setup script to create DB Models and install dependencies (`npm run setup`)
+   - Move to the MISSION-CONTROL directory (`cd mission-control`)
+   - Run the setup script to create DB Models and install dependencies (`npm run setup`)
 
 #### MongoDB
 
@@ -128,33 +162,27 @@ net start mongodb
 ```
 mongosh
 
-# First, create the admin superuser in the admin database
-use admin
-db.createUser({
-  user: "admin",
-  pwd: "adm!nPassxord",
-  roles: [
-    { role: "userAdminAnyDatabase", db: "admin" },
-    { role: "readWriteAnyDatabase", db: "admin" },
-    { role: "dbAdminAnyDatabase", db: "admin" }
-  ]
-})
-
-# Then, create the application user in the saasDatabase
-use saasDatabase
-db.createUser({
-  user: "saasAdmin",
-  pwd: "saasPassword",
-  roles: [
-    { role: "readWrite", db: "saasDatabase" },
-    { role: "dbAdmin", db: "saasDatabase" }
-  ]
-})
-
-# Verify the users were created
+# First, confirm the existing admin/saas accounts (do not delete them)
 use admin
 db.getUsers()
-use saasDatabase
+# If the `admin` superuser is missing, create it with the command below, otherwise skip.
+# db.createUser({ ... })
+
+# Next, create the new application user in the `appDatabase`
+use appDatabase
+db.createUser({
+  user: "appAdmin",
+  pwd: "appPassword",
+  roles: [
+    { role: "readWrite", db: "appDatabase" },
+    { role: "dbAdmin", db: "appDatabase" }
+  ]
+})
+
+# Verify the users were created (admin + appDatabase coexist with existing saasDatabase)
+use admin
+db.getUsers()
+use appDatabase
 db.getUsers()
 ```
 
@@ -178,18 +206,24 @@ security:
 net start mongodb
 ```
 
-- Test the saasAdmin connection...
+- (Optional) Test the legacy `saasAdmin` connection if you still use it for other apps...
 
 ```
 mongosh "mongodb://saasAdmin:saasPassword@localhost:27017/saasDatabase" --eval "db.getName()"
 ```
 
-- Move to the SERVER directory (MDS Command: **SERVER**)
+- Test the new `appAdmin` connection for this template...
+
+```
+mongosh "mongodb://appAdmin:appPassword@localhost:27017/appDatabase" --eval "db.getName()"
+```
+
+- Move to the SERVER directory (`cd server`)
 - In the SERVER CLI, run the new MicroCODE scripts to create all static DB Tables
 
 ```
 $env:NODE_OPTIONS = "--openssl-legacy-provider"
-docker volume create mcode-mongodb-volume
+docker volume create mcode-app-name-mongodb-volume
 npm run seed:all
 ```
 
@@ -222,7 +256,7 @@ MongoDB is bound to 127.0.0.1 (localhost only) ✅ Good for development
 ## Principle of Least Privilege ✅
 
 - **Admin user (`admin`)**: Full access to all databases - use only for maintenance and user management
-- **Application user (`saasAdmin`)**: Limited to `saasDatabase` only - used by the application
+- **Application user (`appAdmin`)**: Limited to `appDatabase` only - used by the application
   - This isolation ensures leaked application credentials don't compromise other databases
 - Consider creating additional users:
   - Read-only user for reporting
@@ -243,7 +277,7 @@ Consider environment-specific users (dev vs production)
 
 ### Executing program
 
-- Move to the SERVER directory (MDS Command: **SERVER**)
+- Move to the SERVER directory (`cd server`)
 - Start the development server (this also starts the Web Browser Client)
 
 ```
