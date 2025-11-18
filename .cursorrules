@@ -1,0 +1,207 @@
+## Cursor Assistant Guidelines
+
+Use these rules when generating code within the 'MicroCODE App Template' Boilerplate. Follow our mantra:
+"Code like a Machine: Consistently and Explicitly, Simply and for Readability (Hail CEASAR)!”℠". While following best security practices.
+
+## General Principles
+
+- Always follow our JavaScript Style Guide at: https://github.com/MicroCODEIncorporated/JavaScriptSG.git
+- Always follow the MicroCODE App-Template folder structure and naming conventions, see below.
+- Assume the database layer uses account_id scoping unless stated otherwise.
+- Always use() HOF for API error handling in api routes.
+- Validate inputs in controllers using utility.validate() with Joi schemas.
+- Business logic belongs in controllers not models.
+- Never query the database directly from controllers.
+- Prefer async/await syntax. No callbacks or nested promises.
+- Comment non-trivial functions with our JSDocs header format.
+- Comment non-trivial logic blocks with a beginning // {brief description of code purpose}...
+
+## Project Structure
+
+The server is structured as follows:
+
+- api # api routes including spec.yaml
+- bin # cli tools
+- config # application configuration
+- controller # controller files
+- emails # html email templates
+- helper # helper entities for mail, s3 etc.
+- locales # locale files
+- migrations # knex.js db migrations
+- model # model files for SQL or MongoDB
+- seeds # db seeds for knex.js
+- template # template files for scaffolding new views, components with the CLI
+- worker # background workers that run with bull
+- .env # env config
+- router.js # static router (used for passport.js callbacks)
+- server.js # entry point
+
+## File Naming (new in `app-template`)
+
+The file naming has been upgraded by MicroCODE to provide a plan to migrate to an {entity} directory structure.
+
+- `/api/{entity}.route.js` for API routes
+- `/model/{entity}.model.js` for models
+- `/locales/{entity}.{locale}.json` for locale files - .en., .es., .fr., etc.
+- `/controller/{entity}.controller.js` for controllers
+
+## Database
+
+- Gravity uses Knex.js to support MySQL, Postgres and all supported Knex.js providers.
+- MicroCODE's App Template is using MongoDB models, no SQL, no Knex.
+- Please refer to DB_CLIENT in .env to determine the current database in use.
+- 'account' is the main organisation and can have multiple users - stored in 'account_users'.
+- Other tables store data related to the account and are secured by having an 'account_id' column.
+- All query selections MUST provide an account_id to prevent data bleeds.
+- Tables usually have a foreign key relationship and cascade to remove user or account data when it's deleted.
+- Always consider the security of the data and explain the security implications.
+- There is a wrapper object that can be used to perform database queries.
+- All DB queries must use account_id as a constraint unless public
+- Validate all inputs in controller layer
+- Prevent mass assignment by destructuring only expected fields
+- Use parameterized queries — no raw SQL unless necessary
+
+```js
+const db = require("./knex")();
+await db("account").insert({ email: "hello@usegravity.app" });
+```
+
+## Accounts
+
+- Store the account-level information, such as plan ID, stripe subscription ID
+- Each account has at least one user with a permission type of 'owner'
+- An account can only have one user with the permission of owner
+- If an account is deleted, all users and associated data linked with the account_id foreign key relationship is deleted
+
+## Users
+
+- Users are individual users of an organisation with a role (permission) within that organisation
+- The 'user' table stores the users name, email, password hash, 2fa rules and preferences.
+- A user is associated with an account via the 'account_users' table which also stores their permission for that account
+- A user can belong to more than one account.
+
+## API
+
+- API routes are stored inside /api
+- There is a spec.yaml file detailing how each route works
+- Routes are grouped by entity and dynamically combined using index.js
+- Protected routes use the 'auth.verify' middleware to specify the permission level required for access
+- auth.verify accepts 3 params: 'permission_name', 'api_scope', 'unverified' - the latter allows the route to be accessed by accounts who have not verified their email address yet
+- use is a HOF contained in helper/utility.js that enables the global error handler in server.js
+
+```js
+api.get(
+  "/api/account",
+  auth.verify("owner", "account.read", "unverified"),
+  use(accountController.get)
+);
+```
+
+## Config
+
+- Configuration files are stored in /config and a .json file exists for each environment
+- Config files store stripe plans, the permission stack, api scopes, throttle settings etc.
+
+## Controllers
+
+- Controller files are stored in /controller
+- A controller file should be created for each new entity, eg. account, user, job etc.
+- Controller files store the business logic of the application and it's methods are called from the API route handlers.
+- No database calls should be contained within a controller.
+- Complex logic should be broken up and stored inside a helper function inside /helper if necessary.
+- Always validate all client-side input using utility.validate with joi.object
+
+```js
+const data = utility.validate(
+  joi.object({
+    plan: joi.string().required(),
+    token: joi.object(),
+    stripe: joi.object(),
+  }),
+  req,
+  res
+);
+```
+
+## Models
+
+- Model files are located in the /model folder
+- A controller file should be created for each new entity, eg. account, user, job etc.
+- Each entity should have a corresponding api, controller and model file.
+- A model interacts with the database to perform CRUD operations
+- No business logic should be included within the models.
+
+## Helper
+
+- The helper folder contains various helper libs
+- Examples: mailer, s3 helper, file helper.
+
+## Locales
+
+- Gravity uses i18n to handle multiple locales
+- Locales are stored in /locales
+- Both en and es files are included
+- Locales are output using the res object
+
+```js
+res.__("account.plan.requires_action");
+```
+
+## Migrations
+
+- Migration files for knex.js are stored inside the /migrations folder
+- New entities should have a new migration file
+- Each migration file should correspond to a set of api, controller or model files
+
+## Template
+
+- The template folder contains template files for creating new components and views via CLI functions
+
+## Worker
+
+- The worker folder contains background workers that can be run with Bull.js
+- Please add any new workers to the Procfile
+
+### Code Style
+
+- Use modern JavaScript (ES6+) with const/let
+- All functions must be pure unless side effects are explicitly needed
+- Avoid deeply nested logic—extract helpers in /helper
+- Always include clear, factual comments above non-trivial functions
+- Use camelCase for variables and functions, snake-case for filenames
+- Use nested objects for controller functions eg. account.users.add
+
+## Folder Rules
+
+/api
+
+- Group routes by feature
+- Each route must:
+- Use use() wrapper for error handling
+- Use auth.verify() with correct permission and scope
+- Reference the corresponding controller method
+
+/controller
+
+- Only handle request/response logic
+- Business logic must be offloaded to helpers or services
+- Never query the database directly
+- Export named functions, grouped by entity (e.g., account.get, account.update)
+
+/model
+
+- Handle only DB queries
+- Wrap DB calls with reusable query builder (db('table'))
+- Never include business logic
+
+/helper
+
+- Place all reusable logic here
+- Split into mailer.js, s3.js, file.js, etc.
+- Utility functions should be easily testable and documented
+
+/worker
+
+- Use Bull queue
+- Workers must gracefully handle retries and logging
+- Add any new workers to the Procfile
