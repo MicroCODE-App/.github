@@ -5,15 +5,21 @@ All notable changes to the MicroCODE App Template will be documented in this fil
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## MicroCODE App Template [0.0.2] - 2025-11-19
+## MicroCODE App Template [0.0.2]
+
+`November 19, 2025`
 
 ### Changed
 
-- Permanently renamed repo 'client-react-web' to `client`
 - Permanently renamed repo 'client-react-native' to `app`
+- Permanently renamed repo 'client-react-web' to `client`
+- Permanently renamed repo 'mission-control' to `console`
+- Maintained the original repo name 'server' as `server`
 - Permanently renamed repo 'supernova' to `website`
 
-## MicroCODE App Template [0.0.1] - 2025-11-19
+## MicroCODE App Template [0.0.1]
+
+`November 19, 2025`
 
 ### Changed
 
@@ -39,7 +45,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Aligned 'client' and 'mission-control:client' to use the same Tailwind package and input.css
 
-## MicroCODE App Template [0.0.0] - 2025-11-17
+## MicroCODE App Template [0.0.0]
+
+`November 17, 2025`
 
 ### Changed
 
@@ -60,7 +68,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## GRAVITY APP (version details from time of clone)
 
-## GRAVITY SERVER [11.0.10] - 2025-11-13
+## GRAVITY SERVER [11.0.10]
+
+`November 13, 2025`
 
 ### Added (Gravity Zero, Ltd.)
 
@@ -78,7 +88,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support ticket system
 - Admin management tools
 
-## GRAVITY MISSION CONTROL [2.1.1] - 2025-08
+## GRAVITY MISSION CONTROL [2.1.1]
+
+`August 2025`
 
 ### Added (Gravity Zero, Ltd.)
 
@@ -92,7 +104,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Same fixes as Gravity Server above
 
-## GRAVITY WEB CLIENT [12.0.18] - 2024-12-XX
+## GRAVITY WEB CLIENT [12.0.18]
+
+`December 2024`
 
 ### Added (Gravity Zero, Ltd.)
 
@@ -113,7 +127,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Client strictPort configuration for multi-client testing
 
-## GRAVITY CLIENT MOBILE APP [8.0.0] - 2024-XX-XX
+## GRAVITY CLIENT MOBILE APP [8.0.0]
+
+`December 2024`
 
 ### Added (Gravity Zero, Ltd.)
 
@@ -127,13 +143,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Unified component library across web and mobile
 - Cross-platform state management
 
-## GRAVITY SUPERNOVA [1.0.0] - 2025-09
+## GRAVITY SUPERNOVA [1.0.0]
+
+`September 2025`
 
 ### Changed (Gravity Zero, Ltd.)
 
 - This replaced Kyle's 'Web Site' template with an ASTRO-based static site generator
 
-## GRAVITY FREE BOILERPLATE [1.0.0] - 2025-05
+## GRAVITY FREE BOILERPLATE [1.0.0]
+
+`May 2025`
 
 ### Added (Gravity Zero, Ltd.)
 
@@ -177,8 +197,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-**Note:** This changelog covers the MicroCODE App Template platform. Individual applications built on this platform maintain their own changelogs.
+**Note:** This changelog covers the MicroCODE App Template platform.
+Individual applications built on this platform maintain their own changelogs.
 
+[0.0.2]: https://github.com/MicroCODE-App-Template/.github/compare/v0.0.2...HEAD
+[0.0.1]: https://github.com/MicroCODE-App-Template/.github/compare/v0.0.1...HEAD
 [0.0.0]: https://github.com/MicroCODE-App-Template/.github/compare/v0.0.0...HEAD
 [11.0.10]: https://github.com/MicroCODE-Gravity-Current/server
 [2.1.1]: https://github.com/MicroCODE-Gravity-Current/mission-control
