@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Permanently renamed repo 'mission-control' to `console`
 - Permanently renamed repo 'supernova' website to `portal`
 - Maintained the original repo name 'server' as `server`
+- Added READMEs for all Repos in App-Template Org
 
 ## MicroCODE App Template [0.0.1]
 
