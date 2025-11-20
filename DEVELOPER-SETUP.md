@@ -155,13 +155,13 @@ And the `App` should automatically open to the Login screen, similar to this...
 
 The primary color for the App can be changed in these two files:
 
-- `client-react-web/tailwind.config.js`
+- `client/tailwind.config.js`
 
 ```
 'primary': '#6363ac',  // Purple
 ```
 
-- `client-react-native/components/global/global.js`
+- `app/components/global/global.js`
 
 ```
 const Color = {
