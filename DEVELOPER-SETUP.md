@@ -173,7 +173,7 @@ const Color = {
 };
 ```
 
-- `console/client/tailwind.config.js`
+- `admin/console/tailwind.config.js`
 
 ```
 'primary': '#6363ac',  // Purple (same as web app)

@@ -5,6 +5,20 @@ All notable changes to the MicroCODE App Template will be documented in this fil
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## MicroCODE App Template [0.0.3]
+
+`November 23, 2025`
+
+### Changed
+
+- Add `npm run lint, lint.all, fix.all` scripts to all repos for ESLint checks and fixes
+- Updated Developer Setup Guide with linting instructions
+- Added ESLint configuration files to all repos with standard rules
+- Aligned code style across all repos using ESLint
+- Fixed all linting issues in all repos (over 1,100 issues fixed)
+- Fixed 2FA toggle issue in UI/UX layer of client app
+- Style `Switch` component in client app to match Apple (Green/Gray) colors for On/Off states
+
 ## MicroCODE App Template [0.0.2]
 
 `November 19, 2025`
@@ -206,6 +220,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **Note:** This changelog covers the MicroCODE App Template platform.
 Individual applications built on this platform maintain their own changelogs.
 
+[0.0.3]: https://github.com/MicroCODE-App-Template/.github/compare/v0.0.3...HEAD
 [0.0.2]: https://github.com/MicroCODE-App-Template/.github/compare/v0.0.2...HEAD
 [0.0.1]: https://github.com/MicroCODE-App-Template/.github/compare/v0.0.1...HEAD
 [0.0.0]: https://github.com/MicroCODE-App-Template/.github/compare/v0.0.0...HEAD

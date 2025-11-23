@@ -59,7 +59,7 @@ The `bin/` directories contain utility scripts for scaffolding, setup, and maint
 - **`clientcheck.js`** — Checks for web client directory and renames if needed
   - Looks for: `client`, `client-react-web`, `client-react-web-main`
 
-## console/bin/
+## admin/bin/
 
 ### Scaffolding & Code Generation
 
@@ -144,7 +144,7 @@ The `bin/` directories contain utility scripts for scaffolding, setup, and maint
 - **`clientcheck.js`** — Checks for web client directory and renames if needed
   - Looks for: `client`, `client-react-web`, `client-react-web-main`
 
-## console/bin/
+## admin/bin/
 
 ### Scaffolding & Code Generation
 
