@@ -4,6 +4,9 @@ contact_links:
   - name: Workflow Documentation
     url: https://github.com/MicroCODE-App-Template/server/blob/main/.github/WORKFLOW.md
     about: Read the MicroCODE workflow before opening an issue.
+  - name: Security reports
+    url: https://github.com/MicroCODE-App-Template/.github/security/policy
+    about: Please report security vulnerabilities here.
 
 # Issue Templates Configuration
 #
