@@ -241,7 +241,7 @@ In all cases, avoid closing Issues automatically via `Fixes #NNNN`/`Closes #NNNN
 Each template aligns with the MicroCODE Software Support Process (SSP) expectations
 ([Problem → Observation → Resolution → Verification]()) and should be completed before requesting a PR review.
 
-## 5. Branch Naming Conventions (GitHub Organizations with Multiple Repos)
+## 6. Branch Naming Conventions (GitHub Organizations with Multiple Repos)
 
 Most Web Apps are deployed within GitHub Organizations.
 When working within an Organization, create branches and PRs according to the following checklist:
@@ -250,8 +250,8 @@ When working within an Organization, create branches and PRs according to the fo
 - [ ] `server` - type/nnnn--db-type-short-name
 - [ ] `client` - type/nnnn--ui-type-short-name
 - [ ] `app` - type/nnnn--ux-type-short-name
-- [ ] `admin` - type/nnnn--cx-type-short-name
-- [ ] `console` - type/nnnn--cx-type-short-name
+- [ ] `admin` - type/nnnn--ad-type-short-name
+- [ ] `console` - type/nnnn--cs-type-short-name
 - [ ] `portal` - type/nnnn--wp-type-short-name
 
   - where **type** is: `hotfix`, `feature`, `bugfix`, `security`, or `release`.
