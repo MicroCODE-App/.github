@@ -1,8 +1,8 @@
 # Migration Status Tracker
 
 **Started**: 2025-11-30
-**Current Phase**: Phase 0 - Preparation ✅ COMPLETE
-**Last Updated**: 2025-11-30
+**Current Phase**: Phase 6 - User Settings System ✅ COMPLETE
+**Last Updated**: 2025-12-05
 
 ---
 
@@ -21,7 +21,7 @@
 - ⏳ Phase 10: Testing
 - ⏳ Phase 11: Cleanup
 
-**Overall Progress**: 9% (1/11 phases complete)
+**Overall Progress**: 18% (2/11 phases complete)
 
 ---
 
@@ -86,8 +86,10 @@
 - Keep MongoDB `_id` invisible (handled automatically)
 - Replace `uuidv4()` with `utility.unique_id('prefix')` for `id` generation
 - Use entity-specific 4-character prefixes (see PHASE3_ID_PREFIXES.md)
+- **Implementation**: Use `mongo.createOrdered(KEY_PREFIX, Model, data)` helper which automatically generates IDs, timestamps, and revision numbers
+- **SQL Models**: Explicit `utility.unique_id('prefix')` calls in create functions (no schema defaults)
 
-**Notes**:
+**Notes**: MongoDB models use the `createOrdered()` helper function which handles ID generation, timestamps, and revision numbers automatically. SQL models require explicit ID generation in create functions.
 
 ---
 
@@ -126,15 +128,44 @@
 
 ### Phase 6: User Settings System
 
-**Status**: ⏳ Not Started
-**Started**: [Date]
-**Completed**: [Date]
+**Status**: ✅ Completed
+**Started**: 2025-12-05
+**Completed**: 2025-12-05
 **Files Modified**:
 
-- ⏳ `user.mongo.js`
-- ⏳ config files
+- ✅ `server/model/mongo/user.mongo.js` - Added settings schema field, settings.get, settings.set, settings.setAll functions
+- ✅ `admin/model/mongo/user.mongo.js` - Added settings schema field, settings.get, settings.set, settings.setAll functions
+- ✅ `server/controller/user.controller.js` - Added settings.get, settings.set, settings.setAll controller methods
+- ✅ `admin/controller/user.controller.js` - Added settings.get, settings.set, settings.setAll controller methods
+- ✅ `server/api/user.route.js` - Added GET /api/user/settings, PUT /api/user/settings, PUT /api/user/settings/all routes
+- ✅ `admin/api/user.route.js` - Added GET /api/user/settings, PUT /api/user/settings, PUT /api/user/settings/all routes
+- ✅ `server/config/default.json` - Added default settings structure (theme, support, messages)
+- ✅ `admin/config/default.json` - Added default settings structure (theme, support, messages)
+- ✅ `client/src/views/account/notifications.jsx` - Refactored to use hierarchical settings structure
+- ✅ `client/src/views/dashboard/help.jsx` - Updated to use settings.support.remoteHelp.enabled
+- ✅ `admin/console/src/views/help.jsx` - Updated to use settings.support.remoteHelp.enabled
+- ✅ `app/views/account/notifications.js` - Refactored to use hierarchical settings structure
+- ✅ `client/src/app/auth.jsx` - Updated to read/write settings.theme.sight.darkMode
+- ✅ `admin/console/src/app/auth.jsx` - Updated to read/write settings.theme.sight.darkMode
+- ✅ `app/components/app/app.js` - Updated to handle nested settings merge
+- ✅ `server/test/user.settings.test.js` - Added comprehensive test cases for settings endpoints
+- ✅ `server/api/spec.yaml` - Documented settings structure
+
+**Implementation Details**:
+
+- **Hierarchical Structure**: Settings use `subsystem.feature.setting` format (e.g., `theme.sight.darkMode`, `messages.email.new_signin`, `support.remoteHelp.enabled`)
+- **Model Functions**: `user.settings.get()`, `user.settings.set()`, `user.settings.setAll()` implemented in both server and admin
+- **API Endpoints**: RESTful GET/PUT endpoints for settings management
+- **Default Settings**: Initialized from `config.get('settings')` in user creation
+- **UI Integration**: All three clients (web, admin console, React Native) updated to use new structure
+- **Backward Compatibility**: Removed old top-level fields (`dark_mode`, `support_enabled`) from schema
 
 **Notes**:
+
+- Clean-slate approach: No migration code needed as `npm run mongo:reset` will be run
+- Settings remain user-scoped (not account-scoped)
+- Validation is flexible (no strict schema enforcement)
+- Test cases cover all three endpoints (get, set, setAll)
 
 ---
 
@@ -236,14 +267,15 @@
 ### ID System
 
 - **Decision**: Keep MongoDB `_id` invisible, use `id` as primary key with `utility.unique_id('prefix')` generation
-- **Date**: [Date]
-- **Rationale**: Matches ladders pattern, provides human-readable entity prefixes, avoids conflicts with MongoDB `_id`
+- **Date**: 2025-12-01
+- **Implementation**: MongoDB models use `mongo.createOrdered(KEY_PREFIX, Model, data)` helper which automatically generates IDs. SQL models use explicit `utility.unique_id('prefix')` calls in create functions.
+- **Rationale**: Matches ladders pattern, provides human-readable entity prefixes, avoids conflicts with MongoDB `_id`. The `createOrdered()` helper simplifies ID generation and ensures consistent field ordering.
 
 ### Timestamp Naming
 
-- **Decision**: Use `_at` suffix consistently
-- **Date**: [Date]
-- **Rationale**: Matches ladders convention
+- **Decision**: Use standard `created_at` / `updated_at` pattern for all entities, with exceptions for domain-specific semantics
+- **Date**: 2025-12-02
+- **Rationale**: Simplifies timestamp handling, `createOrdered()` helper automatically manages these fields. Special cases (token expiration, usage periods) kept for domain clarity.
 
 ### Settings System
 

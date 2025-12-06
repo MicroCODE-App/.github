@@ -15,6 +15,7 @@ migration-phase-0-prep
 migration-phase-1-foundation
 migration-phase-3-id-system
 migration-phase-4-timestamps
+migration-phase-5-complete
 migration-phase-6-settings
 migration-phase-9-bug-fixes
 migration-phase-10-testing-complete
