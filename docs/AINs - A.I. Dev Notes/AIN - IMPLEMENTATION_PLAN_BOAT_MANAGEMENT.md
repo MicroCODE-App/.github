@@ -590,7 +590,7 @@ import { Boats } from 'views/account/boats';
   "request": {
     "title": "Request New Boat",
     "description": "Request a new boat to be added to the system",
-    "button": "Request Boat",
+    "button": "Request NEW Boat",
     "success": "Boat request submitted successfully",
     "form": {
       "name": {
