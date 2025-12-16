@@ -15,15 +15,16 @@ Data - all the GitHub repos in teh current GitHib organization.
 
 ### M - Mission
 
-Your mission is to...
+Your mission is to maintain a readily delvierable, fully functional, web 'solution' comprised by five (5) parts: Portal, App, Client, Admin Console, and Server.
 
 ## Rules for this REPO
 
 Use these rules when generating code within the 'MicroCODE App Template' Boilerplate. Follow our mantra:
-"Code like a Machine: Consistently and Explicitly, Simply and for Readability (Hail CEASAR)!". While following best security practices.
+"Code like a Machine: Consistently and Explicitly, Simply and for Readability (Hail CAESAR)!". While following best security practices.
 
 ## General Principles
 
+- Create all design and development documents in: .github/docs/AINs - AI Dev Notes/ and follow the naming pattern you see there.
 - Always follow our JavaScript Style Guide at: https://github.com/MicroCODEIncorporated/JavaScriptSG.git
 - Always follow the MicroCODE App-Template folder structure and naming conventions, see below.
 - Assume the database layer uses account_id scoping unless stated otherwise.
@@ -33,7 +34,8 @@ Use these rules when generating code within the 'MicroCODE App Template' Boilerp
 - Never query the database directly from controllers.
 - Prefer async/await syntax. No callbacks or nested promises.
 - Comment non-trivial functions with our JSDocs header format, see below.
-- Comment non-trivial logic blocks with a beginning // {brief description of code purpose}...
+- Comment non-trivial logic blocks with a beginning comment explaining what the code does. Example: `// Assemble display name from name parts` (NOT a template with placeholders - write actual descriptive comments).
+- After every edit of a module you must ESLint with that repo's eslint.config.js context and correct all errors and warnings before delcaring the work is 'done'.
 
 ## Project Structure
 
