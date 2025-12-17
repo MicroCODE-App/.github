@@ -1,6 +1,6 @@
 # App Versions & MicroCODE Git Workflow
 
-This guide mirrors the [MicroCODE Software Support Process](./DEVELOPER-SSP.md) (SSP) and documents how developers work with Git branches, semantic versioning, and the four GitFlow templates stored under `./.github/GIT - Issue Notes/`.
+This guide mirrors the [MicroCODE Software Support Process](./DEVELOPER-SSP.md) (SSP) and documents how developers work with Git branches, semantic versioning, and the four GitFlow templates stored in the centralized [`.issue`](https://github.com/MicroCODE-App-Template/.issue) repository.
 
 **`vM.F.H`**
 
@@ -29,14 +29,14 @@ main                (Production)
       └── bugfix/*  (Defect corrections in beta test)
 ```
 
-| Branch                           | Purpose                                                | Source                                                                                  | Merge Target(s)                              | Documenation Template                                                       |
-| -------------------------------- | ------------------------------------------------------ | --------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------- |
-| `main`                           | Production code only. Always tagged. Protected branch. | n/a                                                                                     | n/a                                          | --                                                                          |
-| `hotfix/{issue#}--{short-name}`  | Emergency production fix.                              | `main`                                                                                  | `main`, `develop`, open `release/*`          | [hotfix](../../ISSUE_TEMPLATE/hotfix/hotfix-nnnn--hotfix-short-name.md)     |
-| `develop`                        | Alpha integration branch where features accumulate.    | `main`                                                                                  | None: integration and testing branch         | --                                                                          |
-| `release/bM.F.0`                 | Beta testing branch. Holds selected features for RC.   | `main` + cherry-picks directly from `feature/*`                                         | `main`, `develop`                            | [release](../../ISSUE_TEMPLATE/release/release-bM.F.0.md)                   |
-| `feature/{issue#}--{short-name}` | Implements a single GitHub Issue (new capability).     | `main`                                                                                  | `develop` and cherry-picked into `release/*` | [feature](../../ISSUE_TEMPLATE/feature/feature-nnnn--feature-short-name.md) |
-| `bugfix/{issue#}--{short-name}`  | Fixes discovered while in Alpha or Beta testing.       | `feature/*` (canonical source) or `release/bM.F.0` (if feature branch no longer exists) | `feature/*`, `develop`, or `release/*`       | [bugfix](../../ISSUE_TEMPLATE/bugfix/bugfix-nnnn--bugfix-short-name.md)     |
+| Branch                           | Purpose                                                | Source                                                                                  | Merge Target(s)                              | Documenation Template                                                                                  |
+| -------------------------------- | ------------------------------------------------------ | --------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `main`                           | Production code only. Always tagged. Protected branch. | n/a                                                                                     | n/a                                          | --                                                                                                     |
+| `hotfix/{issue#}--{short-name}`  | Emergency production fix.                              | `main`                                                                                  | `main`, `develop`, open `release/*`          | [hotfix template](../../../.issue/.github/ISSUE_TEMPLATE/hotfix/hotfix-nnnn--hotfix-short-name.md)     |
+| `develop`                        | Alpha integration branch where features accumulate.    | `main`                                                                                  | None: integration and testing branch         | --                                                                                                     |
+| `release/bM.F.0`                 | Beta testing branch. Holds selected features for RC.   | `main` + cherry-picks directly from `feature/*`                                         | `main`, `develop`                            | [release template](../../../.issue/.github/ISSUE_TEMPLATE/release/release-bM.F.0.md)                   |
+| `feature/{issue#}--{short-name}` | Implements a single GitHub Issue (new capability).     | `main`                                                                                  | `develop` and cherry-picked into `release/*` | [feature template](../../../.issue/.github/ISSUE_TEMPLATE/feature/feature-nnnn--feature-short-name.md) |
+| `bugfix/{issue#}--{short-name}`  | Fixes discovered while in Alpha or Beta testing.       | `feature/*` (canonical source) or `release/bM.F.0` (if feature branch no longer exists) | `feature/*`, `develop`, or `release/*`       | [bugfix template](../../../.issue/.github/ISSUE_TEMPLATE/bugfix/bugfix-nnnn--bugfix-short-name.md)     |
 
 Notes:
 
@@ -201,7 +201,7 @@ release/b2.2.0
 - **Issue Linking (Non-Closing):** Reference Issues in the centralized `.issue` repository using **non-closing** phrases such as `Refs MicroCODE-App-Template/.issue#NNNN`, `Related to .issue#NNNN`, or `Implements part of .issue#NNNN` so GitHub **does not** auto-close Issues when a single PR is merged. All issues are created and tracked in the `.issue` repository.
 - **Branch Protection:** `main`, `develop`, and active `release/*` require PR approval + status checks.
 - **Tags:** Always tag releases on `main`. Hotfix tags use the next `H` value.
-- **Documentation:** Use the Markdown templates in `./.github/GIT - Issue Notes/` to capture context before merging.
+- **Documentation:** Use the Markdown templates in the centralized [`.issue`](https://github.com/MicroCODE-App-Template/.issue) repository to capture context before merging.
 - **Auto-delete:** Enable automatic branch deletion in GitHub settings for merged branches.
 
 ### Issue & Branch Lifecycle Rules

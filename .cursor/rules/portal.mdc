@@ -1,0 +1,48 @@
+---
+globs: portal/*
+alwaysApply: false
+---
+
+# Portal Component Rules (Astro Marketing Site)
+
+## Architecture
+
+The portal is an **Astro** static site:
+
+- Marketing website
+- Documentation
+- Static site generation
+
+## Core Principles
+
+### Static-First
+
+- Leverage Astro's static generation
+- Optimize for performance
+- SEO-friendly structure
+
+### Content Focus
+
+- Marketing content
+- Product documentation
+- Public-facing information
+
+## File Structure
+
+- Astro components and pages
+- Static assets
+- Content files
+
+## Code Style
+
+- Follow Astro best practices
+- Use Astro components for reusable UI
+- Optimize images and assets
+- Maintain clean, semantic HTML
+
+## Best Practices
+
+- Focus on performance and SEO
+- Keep content up to date
+- Use Astro's component system
+- Follow existing portal patterns

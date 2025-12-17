@@ -5,7 +5,7 @@ These are defined in AutoHotKey (AKK) - C:\Users\Timothy McGuire\Documents\AutoH
 Install AutoHotKey / Download from:
 https://www.autohotkey.com/
 
-ALT-SHIFT-C: CONCEPT - Discuss ideas without generating code
+ALT-SHIFT-C: CONCEPT/CHANGE/CORRECTION - Discuss ideas without generating code
 
 ALT-SHIFT-D: DESIGN - Design detailed solution
 

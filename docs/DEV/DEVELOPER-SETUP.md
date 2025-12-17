@@ -255,15 +255,15 @@ Contributors names and contact info
 
 ## Version History
 
-- See [CHANGELOG.md](./CHANGELOG.md) for details
+- See [CHANGELOG.md](../../CHANGELOG.md) for details
 
 ## License
 
 This project is licensed under a PRIVATE License - see the LICENSE.md file for details:
-[MicroCODE SaaS License](./LICENSE.md)
+[MicroCODE SaaS License](../../LICENSE.md)
 
 The App Template it is based upon is licensed under their PRIVATE license,
-see [GRAVITY Software License Agreement](./server/LICENSE.md)
+see [GRAVITY Software License Agreement](../../../server/LICENSE.md)
 
 ## Acknowledgments
 

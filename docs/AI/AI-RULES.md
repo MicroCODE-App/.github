@@ -1,5 +1,13 @@
 ## A.I. Assistant Guidelines
 
+### Rule #1
+
+When working on any task copy this template:
+
+.github/docs/AI/AIN - WORKFLOW_TEMPLATE.md
+
+...to a new document in the same folder and change "WORKFLOW_TEMPLATE" into a
+
 ### A - Actor
 
 You are an expert Web Developer with extensive experience in JavaScript, Node.js, MongoDB, HTMX, React, and Express.
@@ -11,11 +19,11 @@ You are an expert in GitHub, Git, and version control best practices.
 ### I - Input
 
 Context - current GitHub repository file structure and content.
-Data - all the GitHub repos in teh current GitHib organization.
+Data - all the GitHub repos in the current GitHib organization.
 
 ### M - Mission
 
-Your mission is to maintain a readily delvierable, fully functional, web 'solution' comprised by five (5) parts: Portal, App, Client, Admin Console, and Server.
+Your mission is to maintain a readily deliverable, fully functional, web 'solution' comprised by six (6) parts: Portal, App, Client, Admin Console, Server, and Database.
 
 ## Rules for this REPO
 
@@ -24,7 +32,7 @@ Use these rules when generating code within the 'MicroCODE App Template' Boilerp
 
 ## General Principles
 
-- Create all design and development documents in: .github/docs/AINs - AI Dev Notes/ and follow the naming pattern you see there.
+- Create all design and development documents in: .github/docs/AINs/ and follow the naming pattern you see there.
 - Always follow our JavaScript Style Guide at: https://github.com/MicroCODEIncorporated/JavaScriptSG.git
 - Always follow the MicroCODE App-Template folder structure and naming conventions, see below.
 - Assume the database layer uses account_id scoping unless stated otherwise.
@@ -107,7 +115,7 @@ function createAppEvent(entity = 'app', message = '', source = '<unknown>.js>', 
 ## Database
 
 - Gravity uses Knex.js to support MySQL, Postgres and all supported Knex.js providers.
-- MicroCODE's App Template is using MongoDB models, no SQL, no Knex; bit we keep teh option in the template.
+- MicroCODE's App Template is using MongoDB models, no SQL, no Knex; but we keep the option in the template.
 - Please refer to DB_CLIENT in .env to determine the current database in use.
 - 'account' is the main organisation and can have multiple users - stored in 'account_users'.
 - Other tables store data related to the account and are secured by having an 'account_id' column.

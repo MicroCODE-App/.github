@@ -129,7 +129,7 @@ We use **Semantic Versioning (SemVer)**: `vM.F.H`
 - `v2.2.0` - Major Version 2, 2nd Feature Release (new features bundled), no hotfixes
 - `v3.0.0` - Major Version 3 (architectural change), 1st Feature Release
 
-See [MicroCODE Git Workflow](./docs/DEV/DEVELOPER-GIT.md) - for detailed procedures and examples.
+See [MicroCODE Git Workflow](./DEVELOPER-GIT.md) - for detailed procedures and examples.
 
 ## Issue Tracking with GitHub Issues/Projects
 
@@ -328,4 +328,4 @@ The workflow ensures:
 
 ---
 
-**For detailed Git commands and examples, see:** `./docs/DEV/DEVELOPER-GIT.md`
+**For detailed Git commands and examples, see:** `./DEVELOPER-GIT.md`

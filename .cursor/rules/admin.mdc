@@ -1,0 +1,66 @@
+---
+globs: admin/*
+alwaysApply: false
+---
+
+# Admin Component Rules
+
+## Architecture
+
+The admin server (`/admin`)is a **NODE-based** administrative server:
+This server follows a **layered architecture**:
+
+- **API Layer** (`api/`) - Route definitions and middleware
+- **Controller Layer** (`controller/`) - Business logic
+- **Model Layer** (`model/`) - Database operations
+- **Helper Layer** (`helper/`) - Reusable utilities
+
+The admin console (`admin/console`) is a **React-based** administrative interface:
+This client is a **React SPA** with:
+
+- React Router for navigation
+- Shadcn UI component library
+- Tailwind CSS for styling
+- i18next for internationalization
+
+Together they provide:
+
+- Backend control and maintenance
+- User and account and DB Entity management
+- System monitoring
+- Administrative tools
+
+## Core Principles
+
+### Administrative Access
+
+- Higher privilege levels than regular client
+- Access to system-wide data (not just account-scoped)
+- Administrative actions require careful validation
+
+### Security
+
+- **ALWAYS** validate admin permissions server-side
+- **NEVER** trust client-side permission checks
+- Log all administrative actions
+- Implement audit trails
+
+## File Structure
+
+- Follow React patterns similar to client
+- Admin-specific components and views
+- Administrative API endpoints
+
+## Code Style
+
+- Follow same React patterns as client
+- Use Shadcn UI components when available
+- Tailwind CSS for styling
+- Clear separation between admin and user-facing code
+
+## Best Practices
+
+- Implement proper access controls
+- Audit all administrative actions
+- Provide clear admin UI/UX
+- Follow existing admin patterns

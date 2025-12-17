@@ -1,0 +1,89 @@
+## MicroCODE App Template - Cursor Rules
+
+**⚠️ TEMPLATE REPOSITORY - All changes flow downstream into our web apps**
+
+### Primary Documentation
+
+**ALWAYS REFERENCE THESE FIRST:**
+
+- **Complete AI Rules**: `.github/docs/AI/AI-RULES.md` - Contains all coding standards, architecture patterns, and development guidelines
+- **Project Context**: `.github/.cursor/instructions.md` - Monorepo structure and component overview
+- **Component-Specific Rules**: `.cursor/rules/*.mdc` - Detailed rules for each component
+
+### Monorepo Structure
+
+This repository contains **six (6) integrated components**:
+
+1. **`server/`** - Node.js/Express backend with MongoDB
+
+   - API routes, controllers, models, migrations
+   - See `.cursor/rules/server.mdc` for detailed rules
+
+2. **`client/`** - React web frontend
+
+   - React Router, Shadcn UI, Tailwind CSS
+   - See `.cursor/rules/client.mdc` and `client/.cursorrules` for detailed rules
+
+3. **`app/`** - React Native mobile apps (iOS & Android)
+
+   - See `.cursor/rules/app.mdc` for detailed rules
+
+4. **`admin/`** - Admin server backend and embedded React console
+
+   - See `.cursor/rules/admin.mdc` for detailed rules
+
+5. **`portal/`** - Astro marketing website
+
+   - See `.cursor/rules/portal.mdc` for detailed rules
+
+6. **`database/`** - MongoDB database (with SQL support via Knex.js)
+   - Database layer with account_id scoping for multi-tenant security
+
+### Core Principles
+
+**Mantra**: "Code like a Machine: Consistently and Explicitly, Simply and for Readability (Hail CAESAR)!"
+
+- **Always** follow the JavaScript Style Guide: https://github.com/MicroCODEIncorporated/JavaScriptSG.git
+- **Always** run ESLint after edits using each repo's `eslint.config.js`
+- **Always** create AI Dev Notes in `.github/docs/AINs/` following the template pattern
+- **Never** query database directly from controllers
+- **Always** use `account_id` scoping for database queries
+- **Always** validate inputs in controllers using `utility.validate()` with Joi schemas
+
+### When Working on Tasks
+
+1. **Copy the workflow template**: `.github/docs/AI/AIN - WORKFLOW_TEMPLATE.md`
+2. **Create a new AIN document** with a descriptive name
+3. **Reference component-specific rules** in `.cursor/rules/` for the component you're modifying
+4. **Follow the architecture patterns** defined in `.github/docs/AI/AI-RULES.md`
+
+### File Organization
+
+- **AI Documentation**: `.github/docs/AINs/`
+- **Developer Docs**: `.github/docs/DEV/`
+- **Issue Templates**: `.issue/.github/ISSUE_TEMPLATE/`
+- **All issues tracked in**: `MicroCODE-App-Template/.issue` repository
+
+### Security & Best Practices
+
+- Assume `account_id` scoping unless stated otherwise
+- Use `use()` HOF for API error handling
+- Business logic belongs in controllers, not models
+- Prefer async/await syntax (no callbacks or nested promises)
+- Comment non-trivial functions with JSDoc headers (see AI-RULES.md for format)
+
+### Context Awareness
+
+When generating code:
+
+- **Check component-specific rules** first (`.cursor/rules/[component].mdc`)
+- **Reference existing patterns** in the same component
+- **Maintain consistency** with existing code style
+- **Follow the entity-centric structure** (see AI-RULES.md for file naming)
+
+### Testing & Quality
+
+- Run ESLint with component-specific config before declaring work "done"
+- Ensure all generated code compiles cleanly
+- Follow existing naming conventions exactly (including case sensitivity)
+- Write self-documenting code with clear comments

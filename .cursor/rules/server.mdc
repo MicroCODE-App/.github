@@ -1,0 +1,172 @@
+---
+globs: server/*
+alwaysApply: false
+---
+
+# Server Component Rules
+
+## Architecture
+
+The server follows a **layered architecture**:
+
+- **API Layer** (`api/`) - Route definitions and middleware
+- **Controller Layer** (`controller/`) - Business logic
+- **Model Layer** (`model/`) - Database operations
+- **Helper Layer** (`helper/`) - Reusable utilities
+
+## Core Principles
+
+### Database Access
+
+- **NEVER** query database directly from controllers
+- **ALWAYS** use models for database operations
+- **ALWAYS** include `account_id` in queries (unless public data)
+- Use MongoDB models (no SQL/Knex unless DB_CLIENT indicates SQL)
+
+### Error Handling
+
+- **ALWAYS** use `use()` HOF wrapper for API routes
+- This enables global error handling in `server.js`
+- Example:
+
+```javascript
+api.get(
+  "/api/account",
+  auth.verify("owner", "account.read"),
+  use(accountController.get)
+);
+```
+
+### Input Validation
+
+- **ALWAYS** validate inputs in controllers using `utility.validate()` with Joi schemas
+- **NEVER** trust client input
+- Example:
+
+```javascript
+const data = utility.validate(
+  joi.object({
+    plan: joi.string().required(),
+    token: joi.object(),
+  }),
+  req,
+  res
+);
+```
+
+### Business Logic
+
+- Business logic belongs in **controllers**, not models
+- Models handle **only** database operations
+- Complex logic should be extracted to `helper/` functions
+
+## File Structure
+
+### API Routes (`api/`)
+
+- Group routes by entity: `/api/{entity}.route.js`
+- Each route must:
+  - Use `use()` wrapper for error handling
+  - Use `auth.verify()` with correct permission and scope
+  - Reference corresponding controller method
+- Routes are dynamically combined using `index.js`
+
+### Controllers (`controller/`)
+
+- One controller file per entity: `/controller/{entity}.controller.js`
+- Export named functions grouped by entity: `account.get`, `account.update`
+- Only handle request/response logic
+- Never query database directly
+- Offload complex logic to helpers
+
+### Models (`model/`)
+
+- One model file per entity: `/model/{entity}.model.js`
+- Handle **only** DB queries
+- No business logic
+- Wrap DB calls with reusable query builder
+- For MongoDB: Use Mongoose or native MongoDB driver patterns
+
+### Helpers (`helper/`)
+
+- Place all reusable logic here
+- Split by concern: `mail.js`, `s3.js`, `file.js`, `utility.js`
+- Functions should be easily testable and documented
+
+## Authentication & Authorization
+
+### Middleware
+
+- Use `auth.verify(permission, scope, unverified)` for protected routes
+- Parameters:
+  - `permission_name` - Required permission level (owner, admin, user)
+  - `api_scope` - API scope string (e.g., "account.read")
+  - `unverified` - Allow unverified email addresses (optional)
+
+### Account Scoping
+
+- All queries must use `account_id` constraint
+- Foreign key relationships cascade on delete
+- Prevent data bleeds between accounts
+
+## Database Patterns
+
+### MongoDB Pattern
+
+```javascript
+// In model
+const Account = require("./model/account.model");
+const account = await Account.findOne({ account_id, _id: id });
+
+// In controller
+const account = await accountModel.get(req.user.account_id, id);
+```
+
+### Account-User Relationships
+
+- `account` table stores organization-level info
+- `account_users` table links users to accounts with permissions
+- Each account has exactly one 'owner' user
+- Users can belong to multiple accounts
+
+## Configuration
+
+- Config files in `/config` (JSON per environment: dev, production)
+- Stores: Stripe plans, permission stack, API scopes, throttle settings
+- `dev` environment uses Stripe Test mode
+
+## Migrations & Seeds
+
+- Migrations in `/migrations` (Knex.js format, but MongoDB primary)
+- Seeds in `/seed` for test data
+- Each entity should have corresponding migration
+
+## Workers
+
+- Background workers in `/worker` folder
+- Use Bull.js for job processing
+- Add new workers to Procfile
+- Workers handle: auth cleanup, onboarding, trials, usage tracking
+
+## Code Style
+
+- Modern JavaScript (2022+) with const/let
+- Async/await syntax (no callbacks or nested promises)
+- JSDoc headers for all exported functions (see AI-RULES.md format)
+- Clear comments above non-trivial functions
+- camelCase for variables/functions, snake_case for filenames
+- Nested objects for controller functions: `account.users.add`
+
+## Testing
+
+- Test files in `/test` directory
+- Use Mocha and Chai
+- Test account scoping and security
+- Test input validation
+
+## Locales
+
+- Locale files in `/locales`
+- Format: `{entity}.{locale}.json` (e.g., `account.en.json`)
+- Use `res.__("key")` to output translations
+- Support: en, es (expandable to fr, de, ru, etc.)
