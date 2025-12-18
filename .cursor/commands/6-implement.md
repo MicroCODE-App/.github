@@ -55,7 +55,7 @@ Be elegant and follow our philosophy of **'Code like a Machine'**: **'Consistent
 - **AI Rules**: `.github/docs/AI/AI-RULES.md` - Follow these rules strictly
 - **Style Guide**: [MicroCODE JavaScript Style Guide.pdf] - Follow CAESAR philosophy
 - **Issue Template**: `.issue/.github/ISSUE_TEMPLATE/` - Update the working file
-- **AIN Workflow Template**: `.github/docs/AI/AIN - WORKFLOW_TEMPLATE.md` (alternative workflow)
+- **AIN Workflow Template**: `.github/docs/AI/AIN [20YY-MM-DD] WORKFLOW_TEMPLATE.md` (alternative workflow)
 - **Component Rules**: `.cursor/rules/[component].mdc`
 - **Architecture**: `.github/.cursor/instructions.md`
 

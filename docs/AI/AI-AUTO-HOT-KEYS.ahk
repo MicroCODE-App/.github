@@ -62,7 +62,7 @@ SendAIMessage(text, actionName) {
 ; ALT-SHIFT-V: Review - Validate the implementation plan
 !+v::
 {
-    message := "`nREVIEW and validate our plan so far, give me a confidence rating from 0% to 100% on your ability to implement this plan in code. If there are any assumptions or questions remaining give me a list of questions to move us to at least 95% confidence. Do not proceed to the implementation until I explicitly accept the plan or answer/waive the remaining questions.`n`n"
+    message := "`nREVIEW and validate our plan so far, give me a confidence rating from 0% to 100% on your ability to implement this plan in code. If there are any assumptions or questions remaining give me a list of questions to move us to at least 95% confidence. Do not proceed to CODE IMPLEMENTATION until I explicitly accept the plan or answer/waive the remaining questions. NOTE: Continue editing the workflow document itself (AIN files or Issue Template derivatives) without stopping - this approval requirement only applies to actual code implementation.`n`n"
     SendAIMessage(message, "Review")
 }
 

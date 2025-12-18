@@ -8,7 +8,7 @@
 
 ## Architecture
 
-### Five-Component Solution
+### Siz-Component Solution
 
 The platform consists of six (6) integrated components:
 
@@ -94,6 +94,14 @@ The platform consists of six (6) integrated components:
   - Marketing pages
   - Documentation
 
+#### 5. Database (External)
+
+- **Technology**: MongoDB
+- **Purpose**: All persistent application data
+- **Key Features**:
+  - JSON/BSON document storage
+  - MERN Stack - DB of choice
+
 ## Entity-Centric Architecture
 
 The server uses an **entity-centric** architecture where `__config.js` serves as the single source of truth. This configuration automatically generates:
@@ -128,6 +136,10 @@ The server uses an **entity-centric** architecture where `__config.js` serves as
 
 ## Development Workflow
 
+### File Format
+
+**⚠️ CRITICAL**: This is a Windows development machine. **ALWAYS** output files and edit files in **CRLF** (Windows) line ending format. All file operations must preserve or convert to CRLF line endings to ensure compatibility with Windows development tools and Git configuration.
+
 ### Issue Tracking
 
 - **Centralized**: All issues in `MicroCODE-App-Template/.issue` repository
@@ -143,8 +155,17 @@ The server uses an **entity-centric** architecture where `__config.js` serves as
 ### AI Development Notes
 
 - **Location**: `.github/docs/AINs/`
-- **Template**: `AIN - WORKFLOW_TEMPLATE.md`
+- **Template**: `AIN [20YY-MM-DD] WORKFLOW_TEMPLATE.md`
 - **Naming**: Follow existing pattern in directory
+- **Editing Rule**: When editing workflow documents (AIN files: `.github/docs/AINs/*.md` or Issue Template derivatives: `.issue/.github/ISSUE_TEMPLATE/**/*.md`), edit continuously without stopping for approval. See `.github/docs/AI/AI-RULES-WORKFLOW-EDITING.md` for details. This only applies to workflow documents, NOT code implementation.
+- **LINT Phase Documentation**: The L: LINT section must follow a specific structure:
+  1. **Step 1**: Initial repo-wide results from `node bin/lint.all.js` (table format with errors/warnings per repo)
+  2. **Step 2**: Individual repo issues in modified files only
+  3. **Step 3**: Fixes applied (file, line, issue type, description)
+  4. **Step 4**: Final repo-wide results (table format showing changes)
+  5. **Step 5**: Final individual repo status (modified files verified)
+  6. **Summary**: Before/after comparison and correction counts
+     See `.github/.cursor/commands/7-lint.md` for complete structure requirements.
 
 ## Key Technologies
 

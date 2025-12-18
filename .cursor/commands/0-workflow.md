@@ -6,7 +6,7 @@ Provides an overview of the complete AI Development Notes workflow and all avail
 
 ## Workflow Phases
 
-The workflow follows these phases, all documented in **ONE document** (`AIN - [FEATURE_NAME].md`):
+The workflow follows these phases, all documented in **ONE document** (`AIN [20YY-MM-DD] [FEATURE_NAME].md`):
 
 1. **C: CONCEPT** - Discuss ideas without generating code
 
@@ -49,8 +49,8 @@ The workflow follows these phases, all documented in **ONE document** (`AIN - [F
 
 ## Getting Started
 
-1. **Copy the template**: `.github/docs/AI/AIN - WORKFLOW_TEMPLATE.md`
-2. **Rename to**: `AIN - [TASK_NAME].md`
+1. **Copy the template**: `.github/docs/AI/AIN [20YY-MM-DD] WORKFLOW_TEMPLATE.md`
+2. **Rename to**: `AIN [20YY-MM-DD] [TASK_NAME].md`
 3. **Start with CONCEPT phase**: Use `/1-concept` command
 4. **Progress through phases** in order (use numbered commands: `/1-concept`, `/2-design`, etc.)
 5. **All phases go in the SAME document** - do NOT create separate files
@@ -65,7 +65,7 @@ The workflow follows these phases, all documented in **ONE document** (`AIN - [F
 
 ## Related Files
 
-- **Template**: `.github/docs/AI/AIN - WORKFLOW_TEMPLATE.md`
+- **Template**: `.github/docs/AI/AIN [20YY-MM-DD] WORKFLOW_TEMPLATE.md`
 - **AI Rules**: `.github/docs/AI/AI-RULES.md`
 - **Workflow Reference**: `.cursor/context/workflow-reference.md`
 - **Component Rules**: `.cursor/rules/*.mdc`

@@ -4,7 +4,7 @@
 
 When working on any task copy this template:
 
-.github/docs/AI/AIN - WORKFLOW_TEMPLATE.md
+.github/docs/AI/AIN [20YY-MM-DD] WORKFLOW_TEMPLATE.md
 
 ...to a new document in the same folder and change "WORKFLOW_TEMPLATE" into a
 
@@ -33,6 +33,9 @@ Use these rules when generating code within the 'MicroCODE App Template' Boilerp
 ## General Principles
 
 - Create all design and development documents in: .github/docs/AINs/ and follow the naming pattern you see there.
+- **IMPORTANT - Workflow Document Editing**: When editing workflow documents (AIN files: `.github/docs/AINs/*.md`
+  or Issue Template derivatives: `.issue/.github/ISSUE_TEMPLATE/**/*.md`), edit continuously without stopping for approval.
+  See `.github/docs/AI/AI-RULES-WORKFLOW-EDITING.md` for details. This rule ONLY applies to workflow documents, NOT code implementation.
 - Always follow our JavaScript Style Guide at: https://github.com/MicroCODEIncorporated/JavaScriptSG.git
 - Always follow the MicroCODE App-Template folder structure and naming conventions, see below.
 - Assume the database layer uses account_id scoping unless stated otherwise.

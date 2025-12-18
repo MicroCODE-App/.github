@@ -27,7 +27,8 @@ Validate the plan thoroughly:
 ### Questions and Assumptions
 
 - **If there are any assumptions or questions remaining**, give me a list of questions to move us to at least **95% confidence**
-- **Do not proceed to the implementation** until I explicitly accept the plan or answer/waive the remaining questions
+- **Do not proceed to CODE IMPLEMENTATION** until I explicitly accept the plan or answer/waive the remaining questions
+- **IMPORTANT**: Continue editing the workflow document itself (AIN files or Issue Template derivatives) without stopping - this approval requirement only applies to actual code implementation, not workflow document editing
 
 ### Check Against Standards
 
@@ -55,7 +56,7 @@ Document:
 
 - **AI Rules**: `.github/docs/AI/AI-RULES.md`
 - **Issue Template**: `.issue/.github/ISSUE_TEMPLATE/` - Update the working file
-- **AIN Workflow Template**: `.github/docs/AI/AIN - WORKFLOW_TEMPLATE.md` (alternative workflow)
+- **AIN Workflow Template**: `.github/docs/AI/AIN [20YY-MM-DD] WORKFLOW_TEMPLATE.md` (alternative workflow)
 - **Component Rules**: `.cursor/rules/[component].mdc`
 - **Style Guide**: https://github.com/MicroCODEIncorporated/JavaScriptSG.git
 
@@ -63,7 +64,8 @@ Document:
 
 - **95% confidence required** before proceeding to BRANCH phase
 - **List all remaining questions** - don't proceed with assumptions
-- **Wait for explicit acceptance** before creating branches
+- **Wait for explicit acceptance** before creating branches or implementing code
 - **Update Status in Issue Template** when plan is approved
 - Review should be thorough before proceeding to implementation
 - Address any concerns before moving to BRANCH phase
+- **Workflow Document Editing**: Continue editing the AIN document (`.github/docs/AINs/*.md`) continuously without stopping for approval. See `.github/docs/AI/AI-RULES-WORKFLOW-EDITING.md` for details.

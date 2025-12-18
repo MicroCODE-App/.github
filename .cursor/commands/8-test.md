@@ -82,7 +82,7 @@ TEST the solution using the code as designed and implemented.
 - **Test Location**: `server/test/` directory (and similar in other repos)
 - **AI Rules**: `.github/docs/AI/AI-RULES.md`
 - **Issue Template**: `.issue/.github/ISSUE_TEMPLATE/` - Update the working file
-- **AIN Workflow Template**: `.github/docs/AI/AIN - WORKFLOW_TEMPLATE.md` (alternative workflow)
+- **AIN Workflow Template**: `.github/docs/AI/AIN [20YY-MM-DD] WORKFLOW_TEMPLATE.md` (alternative workflow)
 
 ## Important
 

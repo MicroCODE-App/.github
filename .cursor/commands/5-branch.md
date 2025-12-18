@@ -51,7 +51,7 @@ Follow our Git Workflow implementation rules in `.github/docs/DEV/DEVELOPER-GIT.
 - **Git Workflow**: `.github/docs/DEV/DEVELOPER-GIT.md` - See Section 5 for branch naming conventions
 - **Issue Tracking**: All issues in `MicroCODE-App-Template/.issue` repository
 - **Issue Template**: `.issue/.github/ISSUE_TEMPLATE/` - Update the working file
-- **AIN Workflow Template**: `.github/docs/AI/AIN - WORKFLOW_TEMPLATE.md` (alternative workflow)
+- **AIN Workflow Template**: `.github/docs/AI/AIN [20YY-MM-DD] WORKFLOW_TEMPLATE.md` (alternative workflow)
 - **Branch Naming**: Zero-padded 4-digit issue numbers
 
 ## Important

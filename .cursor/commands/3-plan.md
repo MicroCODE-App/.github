@@ -59,7 +59,7 @@ Include for each:
 
 - **AI Rules**: `.github/docs/AI/AI-RULES.md` - Follow coding standards
 - **Issue Template**: `.issue/.github/ISSUE_TEMPLATE/` - Update the working file
-- **AIN Workflow Template**: `.github/docs/AI/AIN - WORKFLOW_TEMPLATE.md` (alternative workflow)
+- **AIN Workflow Template**: `.github/docs/AI/AIN [20YY-MM-DD] WORKFLOW_TEMPLATE.md` (alternative workflow)
 - **Component Rules**: `.cursor/rules/[component].mdc`
 - **File Naming**: See AI-RULES.md for entity-centric naming conventions
 

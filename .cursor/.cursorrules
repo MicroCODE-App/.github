@@ -52,7 +52,7 @@ This repository contains **six (6) integrated components**:
 
 ### When Working on Tasks
 
-1. **Copy the workflow template**: `.github/docs/AI/AIN - WORKFLOW_TEMPLATE.md`
+1. **Copy the workflow template**: `.github/docs/AI/AIN [20YY-MM-DD] WORKFLOW_TEMPLATE.md`
 2. **Create a new AIN document** with a descriptive name
 3. **Reference component-specific rules** in `.cursor/rules/` for the component you're modifying
 4. **Follow the architecture patterns** defined in `.github/docs/AI/AI-RULES.md`

@@ -41,15 +41,15 @@ If I tell you there is no GitHub ISSUE #:
 1. **Locate or create the AIN document** for this task:
    - Ask for a simple TASK NAME, use taht to search for an exisitng AIN doc.
    - Use the task name as TASK_NAME - upper snake case.
-   - If starting a new task: Copy `.github/docs/AI/AIN - WORKFLOW_TEMPLATE.md` to create `AIN - [TASK_NAME].md`
-   - If continuing an existing task: Open the existing `AIN - [TASK_NAME].md` document
+   - If starting a new task: Copy `.github/docs/AI/AIN [20YY-MM-DD] WORKFLOW_TEMPLATE.md` to create `AIN [20YY-MM-DD] [TASK_NAME].md`
+   - If continuing an existing task: Open the existing `AIN [20YY-MM-DD] [TASK_NAME].md` document
 2. **Navigate to the C: CONCEPT/CHANGE/CORRECTION section** in the document
 3. **Update the document** with your discussion in that section
 
 ## Context
 
 - **Issue Templates**: `.issue/.github/ISSUE_TEMPLATE/` - Use these for Issue-based workflow
-- **AIN Workflow Template**: `.github/docs/AI/AIN - WORKFLOW_TEMPLATE.md` - Alternative workflow
+- **AIN Workflow Template**: `.github/docs/AI/AIN [20YY-MM-DD] WORKFLOW_TEMPLATE.md` - Alternative workflow
 - **AI Rules**: `.github/docs/AI/AI-RULES.md`
 - **Component Rules**: `.cursor/rules/[component].mdc`
 

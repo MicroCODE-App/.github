@@ -8,9 +8,9 @@ When working on any task, **always** follow this workflow:
 
 Copy the workflow template to create a new AI Development Note:
 
-**Source**: `.github/docs/AI/AIN - WORKFLOW_TEMPLATE.md`
+**Source**: `.github/docs/AI/AIN [20YY-MM-DD] WORKFLOW_TEMPLATE.md`
 
-**Destination**: `.github/docs/AINs/AIN - [DESCRIPTIVE_NAME].md`
+**Destination**: `.github/docs/AINs/AIN [20YY-MM-DD] [DESCRIPTIVE_NAME].md`
 
 ### Step 2: Take A-I-M
 
@@ -73,11 +73,11 @@ Before declaring work "done":
 
 AIN files follow this pattern:
 
-- `AIN - [FEATURE_NAME].md` (single document for entire workflow)
+- `AIN [20YY-MM-DD] [FEATURE_NAME].md` (single document for entire workflow)
 - Examples:
-  - `AIN - EXPAND_USER_PROFILE.md` (contains all phases: CONCEPT, DESIGN, PLAN, REVIEW, BRANCH, IMPLEMENT, LINT, TEST, DOCUMENT, PULL REQUEST)
-  - `AIN - NOTIFICATION_SETTINGS.md`
-  - `AIN - BOAT_IMPORT_FROM_CSV.md`
+  - `AIN [2025-12-17] EXPAND_USER_PROFILE.md` (contains all phases: CONCEPT, DESIGN, PLAN, REVIEW, BRANCH, IMPLEMENT, LINT, TEST, DOCUMENT, PULL REQUEST)
+  - `AIN [2025-12-16] NOTIFICATION_SETTINGS.md`
+  - `AIN [2025-12-14] DESIGN_BOAT_IMPORT_FROM_CSV.md`
 
 Each document follows the template structure with all phases in sections:
 
@@ -94,6 +94,6 @@ Each document follows the template structure with all phases in sections:
 
 ## Related Files
 
-- **Template**: `.github/docs/AI/AIN - WORKFLOW_TEMPLATE.md`
+- **Template**: `.github/docs/AI/AIN [20YY-MM-DD] WORKFLOW_TEMPLATE.md`
 - **AI Rules**: `.github/docs/AI/AI-RULES.md`
 - **Component Rules**: `.cursor/rules/*.mdc`
