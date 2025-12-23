@@ -34,11 +34,29 @@ Source Code Markers:
 
 UI Component Tasks:
 
-    [] Login: Look thru all email addresses when a user is attempting to login, allow any from his list,
+    ☐ Login: Look thru all email addresses when a user is attempting to login, allow any from his list,
     but each must be verified. Expand email objects to incuded verified.
+    ☐ Table: Increase 'strike area' of all cells to include 'pad/margins' for Tooltips
+    ☐ Make all Toast semi-translucent with backdrop-blur effect.
+    ☐ Add HELP View with: Colors, Terminology, Acronyms, Entities.
+    ☐ Get Light/Dark NavBar Switch from LADDERS UI.
+    ☐ In SV Card: Make "Sail No." clickable to go to SV Detail Card as Modal.
+    ☐ In SV Card: Make "Design" clickable to go to Boat Design Card as Modal.
+    ☐ In SV Card: Make "Certificate(s)" clickable to go to Cert Card as Modal.
+    ☐ Get coloring of 2FA from LADDERS UI.
+    ☐ Why onboarding a seeded user when returning from email to RESET PASSWORD, pre-populate email field (No other way to get back to login so why re-enter).
+    ☐ Onboarding: When an invited user clicking the invite link, pre-populate email field (No other way to get back to login so why re-enter) and ask for password to be set.
+    ✔ Add slide-out Sidebar for App navigation like LADDERS UI. @done (12/23/2025, 12:38:12 AM)
+
 
 Backend Tasks:
 
+    ☐ Import: Implement BOAT v. SV distinction in the data model, API, and admin console.
+    ☐ SQL: Remove SQL from everything, use only MONGO, move soruce to server/model/.
+    ☐ All ICONs for all LOCALEs.
+    ☐ Commonize LOCALEs language storage across all services. ({entity}.en.js vs. en_{entity}.js)
+    ☐ A.I. - generate all supported LOCALEs from EN-US source content.
+    ☐ Add feature in Account to REQUEST a 'Bulk Insert of Boats' from a CSV, define CSV format, and generate a TASK to the ADMIN to process the request.
 
 
 Database Tasks:
@@ -47,6 +65,11 @@ Database Tasks:
 
 Frontend Tasks:
 
+    ☐ POLAR generation: Add new POLAR data to Boat and SV models, API, and admin console views.
+    ☐ ORC Configuraiton Comparison: Add new ORC data to Boat and SV models, API, and admin console views.
+    ☐ Course Management: Add Course data model, API, and admin console views.
+    ☐ Exports of Courses, Waypoints to Device Types (e.g., Garmin, etc.) <-- paid 'connectors'.
+    ☐ Get rid of generic 'Something went wrong' error messages, make them specific to the error encountered.
 
 
 Documentation Tasks:
@@ -62,3 +85,7 @@ Testing Tasks:
 
 
 Research Tasks:
+
+    ☐ IDX, Inbox Integrations, APIs, Webhooks: Research and plan implementation of email integrations for user inboxes. (see followup.boss.com)
+    ☐ Embedded Apps: Research and plan implementation of embedded apps within the UI using iframes and secure communication.
+    ☐ Account Features: Add support for 'free' and 'Pro' account features, including usage limits and feature access control.
