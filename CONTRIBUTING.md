@@ -47,7 +47,7 @@ This project adheres to the [Code of Conduct](./CODE_OF_CONDUCT.md). By particip
 3. **Set Up Environment:**
 
    - Copy `.env.example` to `.env` (if available)
-   - Configure environment variables (see [DEVELOPER-ENV.md](../docs/DEV/DEVELOPER-ENV.md))
+   - Configure environment variables (see [DEVELOPER-ENV.md](../DOCs/DEV/DEVELOPER-ENV.md))
    - Set up database connection
 
 4. **Run Setup Scripts:**
@@ -61,7 +61,7 @@ This project adheres to the [Code of Conduct](./CODE_OF_CONDUCT.md). By particip
    npm run dev
    ```
 
-For detailed setup instructions, see [DEVELOPER-SETUP.md](../docs/DEV/DEVELOPER-SETUP.md).
+For detailed setup instructions, see [DEVELOPER-SETUP.md](../DOCs/DEV/DEVELOPER-SETUP.md).
 
 ## Development Workflow
 
@@ -396,9 +396,9 @@ When working with the entity system:
 
 ## Additional Resources
 
-- [Developer Setup Guide](../docs/DEV/DEVELOPER-SETUP.md)
-- [Git Workflow Guide](../docs/DEV/DEVELOPER-GIT.md)
-- [Environment Configuration](../docs/DEV/DEVELOPER-ENV.md)
+- [Developer Setup Guide](../DOCs/DEV/DEVELOPER-SETUP.md)
+- [Git Workflow Guide](../DOCs/DEV/DEVELOPER-GIT.md)
+- [Environment Configuration](../DOCs/DEV/DEVELOPER-ENV.md)
 - [Code of Conduct](./CODE_OF_CONDUCT.md)
 - [Security Policy](./SECURITY.md)
 
@@ -408,7 +408,7 @@ If you have questions about contributing:
 
 - **Email:** dev-team@mcode.com
 - **Slack:** #microcode-app-template
-- **Documentation:** Check the [docs](../docs/) directory
+- **Documentation:** Check the [docs](../DOCs/) directory
 
 ---
 

@@ -1,5 +1,5 @@
 # Dependabot Configuration for MicroCODE App Template
-# See: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+# See: https://DOCs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 #
 # Note: This is an organization-level configuration that provides defaults.
 # Individual repositories can override these settings in their own .github/dependabot.yml files.

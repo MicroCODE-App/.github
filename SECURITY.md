@@ -156,8 +156,8 @@ Security updates are released as needed and may include:
 ## Additional Resources
 
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-- [Node.js Security Best Practices](https://nodejs.org/en/docs/guides/security/)
-- [GitHub Security Best Practices](https://docs.github.com/en/code-security)
+- [Node.js Security Best Practices](https://nodejs.org/en/DOCs/guides/security/)
+- [GitHub Security Best Practices](https://DOCs.github.com/en/code-security)
 
 ---
 

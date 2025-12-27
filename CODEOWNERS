@@ -1,6 +1,6 @@
 # CODEOWNERS
 # This file defines code owners for the MicroCODE App Template organization
-# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+# See: https://DOCs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
 # Default owners for the entire organization
 * @MicroCODE-App-Template/architecture-team
@@ -12,7 +12,7 @@
 
 # Documentation
 *.md @MicroCODE-App-Template/platform-team
-/docs/ @MicroCODE-App-Template/platform-team
+/DOCs/ @MicroCODE-App-Template/platform-team
 
 # Configuration files
 package.json @MicroCODE-App-Template/platform-team
