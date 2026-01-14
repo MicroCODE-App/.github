@@ -5,9 +5,44 @@ All notable changes to the MicroCODE App Template will be documented in this fil
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## MicroCODE App Template [0.0.6]
+## MicroCODE App Template [0.1.0]
 
-`January 26, 2025`
+`January 14, 2026`
+
+### Added
+
+- **Combine all onboarding into single flow** (Issue #15)
+
+  - Redesign of onboarding to include Clubs, Org payments
+  - Ability to Add Boats
+  - Separate Credit Card Validation
+
+- **UI Components**:
+
+  - Added complete INFO module for both CONSOLE and CLIENT
+  - Added App version display to SUPPORT View
+  - Added 'alpha' and 'beta' logo support
+  - Added 'not implemented' modals for future features
+  - Added dynamic filters to most Views
+  - Added screen and context capture to Feedback
+
+### Changed
+
+- **Model Schema** (`server/model/*.model.js`):
+
+  - Made minor updates to schema
+  - Prepared a MongoDB Review (ISSUE#16) for next stage
+
+- **UI Components**:
+
+  - Updated many Views with new columns
+
+- **Seeder** (`server/seed/seeder.js`):
+  - Upgraded Import USERs
+  - Upgraded IMport BOATs
+  - Added 'merge' capability for multi-pass merge
+
+`December 26, 2025`
 
 ### Added
 
