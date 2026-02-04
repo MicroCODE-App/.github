@@ -1,36 +1,33 @@
 ###################################################################################################
 # .github .gitattributes
+# MicroCODE-App-Template ORG - .github repo (org-level templates, workflows, docs)
 #
 # Goals:
-#  1. Guarantee binary (non-text) assets are never line-ending converted or diff-mangled
-#  2. Let Git handle text cleanly using default behavior (LF in repo, Windows-safe checkouts)
-#  3. Keep the file small & readable (only what's necessary)
+#  1. Store all text files as LF in repository (industry standard)
+#  2. Guarantee binary assets are never line-ending converted or diff-mangled
+#  3. Keep the file small & readable
 ###################################################################################################
 
 ###################################################################################################
-# 1) TEXT NORMALIZATION
+# 1) TEXT NORMALIZATION - LF in repo
 ###################################################################################################
-# Industry Standard: Store LF in repository, Git converts on checkout for Windows
 * text=auto eol=lf
 
-# Windows-native scripts use LF (industry standard - Git converts to CRLF on checkout via core.autocrlf=true)
+# Windows-native scripts: store LF (use core.autocrlf=input to keep LF on Windows)
 *.bat text eol=lf
 *.cmd text eol=lf
 *.ps1 text eol=lf
 
-# SVG is normal XML text; allow diffs and LF normalization
-*.svg  text eol=lf
+# SVG is XML text; allow diffs and LF normalization
+*.svg text eol=lf
 
-# Shell scripts should use LF
+# Shell scripts
 *.sh text eol=lf
 *.bash text eol=lf
 
 ###################################################################################################
 # 2) BINARY / OPAQUE ASSETS (NEVER EOL-CONVERT)
 ###################################################################################################
-# Explicit binary declarations prevent line-ending conversion and corruption
-
-# Archive / Compressed Resources
 *.7z binary
 *.bz2 binary
 *.eot binary
@@ -41,7 +38,6 @@
 *.xz binary
 *.zip binary
 
-# Image Resources
 *.avi binary
 *.avif binary
 *.gif binary
@@ -50,29 +46,24 @@
 *.jpg binary
 *.png binary
 
-# Document Resources
 *.pdf binary
 
-# Font Resources
 *.otf binary
 *.ttf binary
 *.woff binary
 *.woff2 binary
 
-# Sound Resources
 *.wav binary
 *.flac binary
 *.aac binary
 *.ogg binary
 
-# Video Resources
 *.mov binary
 *.mp3 binary
 *.mp4 binary
 *.webm binary
 *.webp binary
 
-# Microsoft Office files (OOXML format)
 *.doc binary
 *.docx binary
 *.ppt binary
@@ -83,7 +74,4 @@
 ###################################################################################################
 # 3) NOISY / GENERATED FILES
 ###################################################################################################
-# Reduce noise in diffs for lock files
 package-lock.json -diff
-
-# End of file
