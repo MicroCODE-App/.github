@@ -2,11 +2,11 @@
 
 **Enterprise SaaS Application Platform**
 
-**_⚠️ TEMPLATE REPOSITORY ONLY - ALL CHANGES FLOW DOWNSTREAM INTO OUR WEB APPS_**
+**_⚠️ This is a MONOREPO hold a 'Platform' and its derived APPs**
 
 This repository contains a working copy of the licensed [Gravity SaaS Boilerplate](https://usegravity.app/) that we have modified for bulding our Apps.
 
-MicroCODE App Template is our production-ready web and mobile application framework, customized from the Gravity SaaS Boilerplate for building enterprise-grade applications.
+MicroCODE App is our production-ready web and mobile application framework, customized from the Gravity SaaS Boilerplate for building enterprise-grade applications.
 
 ## Create ISSUEs via Forms
 
@@ -52,7 +52,7 @@ Use these links to open form-based issues for each type of work item:
 
 ## Overview
 
-MicroCODE App Template serves as the foundation for all MicroCODE, Inc. SaaS products. It provides a battle-tested, feature-rich platform that eliminates boilerplate development and accelerates time-to-market for new applications.
+MicroCODE App serves as the foundation for all MicroCODE, Inc. SaaS products. It provides a battle-tested, feature-rich platform that eliminates boilerplate development and accelerates time-to-market for new applications.
 
 This is our **active development platform** - the customized derivative of the licensed Gravity boilerplate that we use to build production applications.
 
@@ -85,7 +85,7 @@ Common benefits:
 
 ## Built From Gravity
 
-MicroCODE App Template is our enhanced version of the [Gravity SaaS Boilerplate](https://usegravity.app/) by Gravity Zero Ltd., with MicroCODE-specific customizations and enterprise features.
+MicroCODE App is our enhanced version of the [Gravity SaaS Boilerplate](https://usegravity.app/) by Gravity Zero Ltd., with MicroCODE-specific customizations and enterprise features.
 
 ### Core Gravity Features Included
 
@@ -142,7 +142,7 @@ These features were added by MicroCODE, Inc. befoe using Gravity for production 
 - **Email**: `Mailgun` Transactional email with optional multiple provider support
 - **Testing**: `Mocha` and `Chai`, integration tests, end-to-end testing
 
-## Applications Built on MicroCODE App Template
+## Applications Built on MicroCODE App
 
 Products built on this platform:
 
@@ -202,7 +202,7 @@ This automatically generates:
 
 ### For New Applications
 
-1. Clone MicroCODE App Template repository
+1. Clone MicroCODE App repository
 2. Follow DEVERLOPER-SETUP instructions.
 3. Configure entities in `__config.js`
 4. Run entity generation CLI
@@ -227,7 +227,7 @@ This GitHub Organization `MicroCODE-App-Template` contains:
 
 ### Gravity Updates
 
-We maintain a separate reference copy of the original Gravity boilerplate to track upstream changes. Updates are evaluated and selectively integrated into `MicroCODE App Template` to maintain compatibility while preserving our customizations. **NOTE**: Our App Template has diveraged greatly from the `Gravity App` solution and it can only be used as a reference or detailed example going forward.
+We maintain a separate reference copy of the original Gravity boilerplate to track upstream changes. Updates are evaluated and selectively integrated into `MicroCODE App` to maintain compatibility while preserving our customizations. **NOTE**: Our App has diveraged greatly from the `Gravity App` solution and it can only be used as a reference or detailed example going forward.
 
 ## License
 
