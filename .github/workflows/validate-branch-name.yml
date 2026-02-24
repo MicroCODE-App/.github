@@ -75,7 +75,7 @@ jobs:
                   ISSUE_REPO: ${{ inputs.issue-repo }}
               run: |
                   # Check if issue exists in .issue repository
-                  ORG="MicroCODE-App-Template"
+                  ORG="MicroCODE-App"
                   REPO="${ISSUE_REPO}"
 
                   echo "Checking if issue #${ISSUE_NUM} exists in ${ORG}/${REPO}..."
@@ -128,7 +128,7 @@ jobs:
 
                       **Requirements:**
                       - Issue number must be zero-padded to 4 digits (e.g., \`0123\`)
-                      - Issue must exist in [\`.issue\`](https://github.com/MicroCODE-App-Template/${issueRepo}) repository
+                      - Issue must exist in [\`.issue\`](https://github.com/MicroCODE-App/${issueRepo}) repository
                       - Use double dashes (\`--\`) between issue number and description
 
                       **Examples:**
@@ -138,7 +138,7 @@ jobs:
                       - ❌ \`feature/0123-add-user-auth\` (single dash)
 
                       **Next Steps:**
-                      1. Create an issue in [\`.issue\`](https://github.com/MicroCODE-App-Template/${issueRepo}/issues/new) repository
+                      1. Create an issue in [\`.issue\`](https://github.com/MicroCODE-App/${issueRepo}/issues/new) repository
                       2. Rename your branch to match the issue number (zero-padded)
                       3. Push the renamed branch and update this PR`;
 

@@ -12,13 +12,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - **Combine all onboarding into single flow** (Issue #15)
-
   - Redesign of onboarding to include Clubs, Org payments
   - Ability to Add Boats
   - Separate Credit Card Validation
 
 - **UI Components**:
-
   - Added complete INFO module for both CONSOLE and CLIENT
   - Added App version display to SUPPORT View
   - Added 'alpha' and 'beta' logo support
@@ -29,12 +27,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - **Model Schema** (`server/model/*.model.js`):
-
   - Made minor updates to schema
   - Prepared a MongoDB Review (ISSUE#16) for next stage
 
 - **UI Components**:
-
   - Updated many Views with new columns
 
 - **Seeder** (`server/seed/seeder.js`):
@@ -57,14 +53,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - **Boat Model Schema** (`server/model/boat.model.js`):
-
   - Added `sail_cc_raw` field (optional) to preserve original legacy codes
   - `sail_cc` and `sail_no` now required for new records
   - `boat_design_id` and `boat_builder_id` now required
   - `bdsn_key` and `bbld_key` now optional
 
 - **UI Components**:
-
   - EntityCard: BOAT entities display flag instead of logo when `sail_cc` present
   - Admin Tables: Added 'Country' flag column, removed boat 'name' column
   - Boat/SV Lists: Display Flag + Sail No. (bold) on line 1, Design (gray) on line 2
@@ -140,7 +134,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Created 'breakdown' of all repos in Developer Setup Guide (the opposite of 'setup'),
 - 'Setup' / 'Breakdown' allow devs to setup teh tempalte locally for development,
 - Allows Devs to then restore the update code repos to their 'original' state for cloning new apps
-- Updated all repository remote URLs to new MicroCODE-App-Template organization
+- Updated all repository remote URLs to new MicroCODE-App organization
 - Updated Developer Setup Guide with new repo names and structure
 
 ## MicroCODE App Template [0.0.1]
@@ -158,7 +152,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added DEVELOPER-BIND.md for binary scripts documentation
 - Updated README.md with new organization and setup instructions
 - Aligned all color schemes in client-react-native global.js with client-react-web
-- Updated all repository remote URLs to new MicroCODE-App-Template organization
+- Updated all repository remote URLs to new MicroCODE-App organization
 - Removed 'dirty' \*.model.js files from /model directory
 - Added MicroCODE Branding Images to all (4) repositories
 - Updated `server: npm run setup` and `server: npm run dev` scripts to init, build, and 'run dev' all all solution components:
@@ -177,10 +171,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Build MicroCODE-App-Template from `Gravity-Current` (2025-11 version)
+- Build MicroCODE-App from `Gravity-Current` (2025-11 version)
 - Stored as a new GitHub Organization
 - Updated all repository remote URLs to new organization
-- All Route, Model, View, and Controller references updated to MicroCODE-App-Template namespace
+- All Route, Model, View, and Controller references updated to MicroCODE-App namespace
 - e.g.: from `/model/{entity}.js` to `/model/{entity}.model.js`
 - This is preparation for migrating to our `ENTITY centric architecture` and templating
 - Configuration-driven entity management
@@ -326,10 +320,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **Note:** This changelog covers the MicroCODE App Template platform.
 Individual applications built on this platform maintain their own changelogs.
 
-[0.0.3]: https://github.com/MicroCODE-App-Template/.github/compare/v0.0.3...HEAD
-[0.0.2]: https://github.com/MicroCODE-App-Template/.github/compare/v0.0.2...HEAD
-[0.0.1]: https://github.com/MicroCODE-App-Template/.github/compare/v0.0.1...HEAD
-[0.0.0]: https://github.com/MicroCODE-App-Template/.github/compare/v0.0.0...HEAD
+[0.0.3]: https://github.com/MicroCODE-App/.github/compare/v0.0.3...HEAD
+[0.0.2]: https://github.com/MicroCODE-App/.github/compare/v0.0.2...HEAD
+[0.0.1]: https://github.com/MicroCODE-App/.github/compare/v0.0.1...HEAD
+[0.0.0]: https://github.com/MicroCODE-App/.github/compare/v0.0.0...HEAD
 [11.0.10]: https://github.com/MicroCODE-Gravity-Current/server
 [2.1.1]: https://github.com/MicroCODE-Gravity-Current/mission-control
 [12.0.18]: https://github.com/MicroCODE-Gravity-Current/client-react-web

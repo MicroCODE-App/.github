@@ -64,26 +64,22 @@ If you discover a security vulnerability in any MicroCODE App Template repositor
 ### For Developers
 
 1. **Never commit secrets:**
-
    - API keys, passwords, tokens
    - Private keys, certificates
    - Database credentials
    - Use environment variables or secure secret management
 
 2. **Validate all input:**
-
    - Sanitize user input
    - Use parameterized queries
    - Validate data types and formats
 
 3. **Keep dependencies updated:**
-
    - Regularly review Dependabot alerts
    - Update dependencies with known vulnerabilities
    - Review changelogs for security fixes
 
 4. **Follow secure coding practices:**
-
    - Use HTTPS for all external communications
    - Implement proper authentication and authorization
    - Follow principle of least privilege
@@ -97,13 +93,11 @@ If you discover a security vulnerability in any MicroCODE App Template repositor
 ### For Operations
 
 1. **Monitor security alerts:**
-
    - GitHub Security Advisories
    - Dependabot alerts
    - Security scanning results
 
 2. **Maintain secure configurations:**
-
    - Keep systems patched
    - Use strong authentication
    - Implement network security controls

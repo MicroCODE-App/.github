@@ -80,13 +80,11 @@ For general company or business inquiries:
 ### New to the Platform?
 
 1. **Read the Documentation:**
-
    - Start with [README.md](./README.md)
    - Review [Developer Setup Guide](../.issue/DEV/DEVELOPER-SETUP.md)
    - Check [CHANGELOG.md](./CHANGELOG.md) for recent changes
 
 2. **Set Up Your Environment:**
-
    - Follow the setup instructions in the Developer Setup Guide
    - Configure your development environment
    - Run the setup scripts
@@ -138,12 +136,10 @@ For general company or business inquiries:
 ### Before Reporting
 
 1. **Search Existing Issues:**
-
    - Check if the issue has already been reported
    - Review closed issues for solutions
 
 2. **Gather Information:**
-
    - Repository and version affected
    - Steps to reproduce
    - Expected vs. actual behavior
@@ -158,13 +154,11 @@ For general company or business inquiries:
 ### Issue Reporting Process
 
 1. **Create an Issue:**
-
    - Use the appropriate issue template
    - Provide detailed information
    - Include relevant code snippets or logs
 
 2. **Wait for Response:**
-
    - Issues are triaged within 1-2 business days
    - Priority is assigned based on severity and impact
    - You'll be notified of status updates
@@ -179,14 +173,12 @@ For general company or business inquiries:
 ### Submitting Feature Requests
 
 1. **Use the Feature Request Template:**
-
    - Clearly describe the feature
    - Explain the problem it solves
    - Provide use cases
    - Assess impact and effort
 
 2. **Review Process:**
-
    - Feature requests are reviewed by the architecture team
    - Priority is assigned based on:
      - Alignment with platform goals
@@ -204,13 +196,11 @@ For general company or business inquiries:
 ### How to Contribute
 
 1. **Read Contributing Guidelines:**
-
    - Review [CONTRIBUTING.md](./CONTRIBUTING.md)
    - Understand code standards
    - Follow development workflow
 
 2. **Make Changes:**
-
    - Create a feature branch
    - Make your changes
    - Write tests

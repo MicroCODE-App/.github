@@ -10,43 +10,43 @@ MicroCODE App is our production-ready web and mobile application framework, cust
 
 ## Create ISSUEs via Forms
 
-**All issues are tracked in the centralized [`.issue`](https://github.com/MicroCODE-App-Template/.issue) repository.**
+**All issues are tracked in the centralized [`.issue`](https://github.com/MicroCODE-App/.issue) repository.**
 
 Use these links to open form-based issues for each type of work item:
 
 ### ⛔ Hotfix - defect in PRODUCTION
 
-- **Report/Request:** [Defect Report](https://github.com/MicroCODE-App-Template/.issue/issues/new?template=defect_report.yml)
-- **Template MD:** [Hotfix Template](https://github.com/MicroCODE-App-Template/.issue/issues/new?template=hotfix/hotfix-nnnn--hotfix-short-name.md)
+- **Report/Request:** [Defect Report](https://github.com/MicroCODE-App/.issue/issues/new?template=defect_report.yml)
+- **Template MD:** [Hotfix Template](https://github.com/MicroCODE-App/.issue/issues/new?template=hotfix/hotfix-nnnn--hotfix-short-name.md)
 
 ### 🎃 Bug/Bugfix - defect in BETA or ALPHA Release
 
-- **Report/Request:** [Bug Report](https://github.com/MicroCODE-App-Template/.issue/issues/new?template=bug_report.yml) | [Defect Report](https://github.com/MicroCODE-App-Template/.issue/issues/new?template=defect_report.yml)
-- **Template MD:** [Bugfix Template](https://github.com/MicroCODE-App-Template/.issue/issues/new?template=bugfix/bugfix-nnnn--bugfix-short-name.md)
+- **Report/Request:** [Bug Report](https://github.com/MicroCODE-App/.issue/issues/new?template=bug_report.yml) | [Defect Report](https://github.com/MicroCODE-App/.issue/issues/new?template=defect_report.yml)
+- **Template MD:** [Bugfix Template](https://github.com/MicroCODE-App/.issue/issues/new?template=bugfix/bugfix-nnnn--bugfix-short-name.md)
 
 ### 😎 Feature - new request for PRODUCTION
 
-- **Report/Request:** [Feature Request](https://github.com/MicroCODE-App-Template/.issue/issues/new?template=feature_request.yml)
-- **Template MD:** [Feature Template](https://github.com/MicroCODE-App-Template/.issue/issues/new?template=feature/feature-nnnn--feature-short-name.md)
+- **Report/Request:** [Feature Request](https://github.com/MicroCODE-App/.issue/issues/new?template=feature_request.yml)
+- **Template MD:** [Feature Template](https://github.com/MicroCODE-App/.issue/issues/new?template=feature/feature-nnnn--feature-short-name.md)
 
 ### 📦 Release - request for new collection of features in PRODUCTION
 
-- **Report/Request:** [Release Request](https://github.com/MicroCODE-App-Template/.issue/issues/new?template=release_request.yml)
-- **Template MD:** [Release Template](https://github.com/MicroCODE-App-Template/.issue/issues/new?template=release/release-bM.F.0.md)
+- **Report/Request:** [Release Request](https://github.com/MicroCODE-App/.issue/issues/new?template=release_request.yml)
+- **Template MD:** [Release Template](https://github.com/MicroCODE-App/.issue/issues/new?template=release/release-bM.F.0.md)
 
 ### 📋 Task - backend work in DEVELOPMENT
 
-- **Report/Request:** [Task Request](https://github.com/MicroCODE-App-Template/.issue/issues/new?template=task_request.yml)
-- **Template MD:** [Task Template](https://github.com/MicroCODE-App-Template/.issue/issues/new?template=task/task-nnnn--task-short-name.md)
+- **Report/Request:** [Task Request](https://github.com/MicroCODE-App/.issue/issues/new?template=task_request.yml)
+- **Template MD:** [Task Template](https://github.com/MicroCODE-App/.issue/issues/new?template=task/task-nnnn--task-short-name.md)
 
 ### 🛡️ Security - vulnerability in PRODUCTION
 
-- **Report/Request:** [Security Vulnerability Report](https://github.com/MicroCODE-App-Template/.issue/issues/new?template=security_vulnerability.yml)
-- **Template MD:** [Security Template](https://github.com/MicroCODE-App-Template/.issue/issues/new?template=security/security-nnnn--vulnerability-short-name.md)
+- **Report/Request:** [Security Vulnerability Report](https://github.com/MicroCODE-App/.issue/issues/new?template=security_vulnerability.yml)
+- **Template MD:** [Security Template](https://github.com/MicroCODE-App/.issue/issues/new?template=security/security-nnnn--vulnerability-short-name.md)
 
 ### ⚙️ Configuration - change to Solution set-up in DEVELOPMENT
 
-- **Report/Request:** [Configuration Change](https://github.com/MicroCODE-App-Template/.issue/issues/new?template=config.yml)
+- **Report/Request:** [Configuration Change](https://github.com/MicroCODE-App/.issue/issues/new?template=config.yml)
 
 **Note:** All issues are created in the `.issue` repository to maintain centralized tracking across all solution repositories (admin, app, client, portal, server).
 
@@ -215,7 +215,7 @@ This is an internal platform. Contributions should follow MicroCODE development 
 
 ## Repository Structure
 
-This GitHub Organization `MicroCODE-App-Template` contains:
+This GitHub Organization `MicroCODE-App` contains:
 
 - `admin` - backend control and maintenance
 - `app` - mobile Apps for iOS and Android

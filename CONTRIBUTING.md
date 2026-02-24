@@ -27,14 +27,14 @@ This project adheres to the [Code of Conduct](./CODE_OF_CONDUCT.md). By particip
 - Git
 - MongoDB or SQL database (depending on configuration)
 - Redis (for caching features)
-- Access to MicroCODE-App-Template GitHub organization
+- Access to MicroCODE-App GitHub organization
 
 ### Initial Setup
 
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/MicroCODE-App-Template/[repository-name].git
+   git clone https://github.com/MicroCODE-App/[repository-name].git
    cd [repository-name]
    ```
 
@@ -45,7 +45,6 @@ This project adheres to the [Code of Conduct](./CODE_OF_CONDUCT.md). By particip
    ```
 
 3. **Set Up Environment:**
-
    - Copy `.env.example` to `.env` (if available)
    - Configure environment variables (see [DEVELOPER-ENV.md](../.issue/DEV/DEVELOPER-ENV.md))
    - Set up database connection
@@ -114,7 +113,6 @@ git checkout -b hotfix/issue-number-short-description
    ```
 
 2. **Follow Style Guide:**
-
    - Use 2 spaces for indentation
    - Use single quotes for strings
    - Use semicolons
@@ -122,7 +120,6 @@ git checkout -b hotfix/issue-number-short-description
    - Use meaningful variable and function names
 
 3. **Code Organization:**
-
    - Group related functionality
    - Separate concerns (UI, UX, DB, IO layers)
    - Use consistent file naming conventions
@@ -211,7 +208,6 @@ Fixes #456
 ### Before Submitting
 
 1. **Update Documentation:**
-
    - Update README if needed
    - Add/update code comments
    - Update API documentation
@@ -332,24 +328,20 @@ async function getUserById(userId) {
 ### Review Criteria
 
 1. **Code Quality:**
-
    - Follows coding standards
    - Is readable and maintainable
    - Has appropriate error handling
 
 2. **Functionality:**
-
    - Works as intended
    - Handles edge cases
    - Doesn't break existing functionality
 
 3. **Testing:**
-
    - Has adequate test coverage
    - Tests are meaningful and pass
 
 4. **Documentation:**
-
    - Code is well-commented
    - Documentation is updated
    - Changes are clearly described
@@ -368,13 +360,11 @@ async function getUserById(userId) {
 ### Addressing Review Feedback
 
 1. **Respond to Comments:**
-
    - Acknowledge all feedback
    - Ask questions if unclear
    - Discuss alternatives if needed
 
 2. **Make Changes:**
-
    - Address all requested changes
    - Update code based on feedback
    - Re-request review when ready

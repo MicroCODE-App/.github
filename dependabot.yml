@@ -72,7 +72,7 @@ updates:
   # Repository-specific configurations
   # Note: These configurations are provided as templates/examples.
   # Each repository should copy the relevant section to its own .github/dependabot.yml file
-  # and add reviewers field (e.g., reviewers: ["MicroCODE-App-Template/platform-team"])
+  # and add reviewers field (e.g., reviewers: ["MicroCODE-App/platform-team"])
 
   # Admin repository
   - package-ecosystem: "npm"
@@ -82,7 +82,7 @@ updates:
       day: "monday"
       time: "09:00"
     open-pull-requests-limit: 10
-    # reviewers: ["MicroCODE-App-Template/platform-team"]  # Add at repository level
+    # reviewers: ["MicroCODE-App/platform-team"]  # Add at repository level
     labels:
       - "dependencies"
       - "admin"
@@ -99,7 +99,7 @@ updates:
       day: "monday"
       time: "09:00"
     open-pull-requests-limit: 10
-    # reviewers: ["MicroCODE-App-Template/platform-team"]  # Add at repository level
+    # reviewers: ["MicroCODE-App/platform-team"]  # Add at repository level
     labels:
       - "dependencies"
       - "app"
@@ -116,7 +116,7 @@ updates:
       day: "monday"
       time: "09:00"
     open-pull-requests-limit: 10
-    # reviewers: ["MicroCODE-App-Template/platform-team"]  # Add at repository level
+    # reviewers: ["MicroCODE-App/platform-team"]  # Add at repository level
     labels:
       - "dependencies"
       - "client"
@@ -133,7 +133,7 @@ updates:
       day: "monday"
       time: "09:00"
     open-pull-requests-limit: 10
-    # reviewers: ["MicroCODE-App-Template/platform-team"]  # Add at repository level
+    # reviewers: ["MicroCODE-App/platform-team"]  # Add at repository level
     labels:
       - "dependencies"
       - "portal"
@@ -150,7 +150,7 @@ updates:
       day: "monday"
       time: "09:00"
     open-pull-requests-limit: 10
-    # reviewers: ["MicroCODE-App-Template/platform-team"]  # Add at repository level
+    # reviewers: ["MicroCODE-App/platform-team"]  # Add at repository level
     labels:
       - "dependencies"
       - "server"

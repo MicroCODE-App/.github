@@ -46,7 +46,6 @@ If you experience or witness unacceptable behavior, please report it:
 
 1. **Email:** dev-team@mcode.com or company@mcode.com
 2. **Include:**
-
    - Description of the incident
    - Date and time
    - Names of individuals involved

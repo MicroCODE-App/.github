@@ -86,7 +86,7 @@ jobs:
           RESPONSE=$(curl -s -w "\n%{http_code}" \
             -H "Authorization: token $GITHUB_TOKEN" \
             -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/MicroCODE-App-Template/$ISSUE_REPO/issues/$ISSUE_NUM")
+            "https://api.github.com/repos/MicroCODE-App/$ISSUE_REPO/issues/$ISSUE_NUM")
 
           HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
           BODY=$(echo "$RESPONSE" | sed '$d')
@@ -96,7 +96,7 @@ jobs:
             echo ""
             echo "Branch: ${{ inputs.branch-name }}"
             echo "Issue Number: $ISSUE_NUMBER"
-            echo "Error: Issue #$ISSUE_NUM does not exist in MicroCODE-App-Template/$ISSUE_REPO repository"
+            echo "Error: Issue #$ISSUE_NUM does not exist in MicroCODE-App/$ISSUE_REPO repository"
             echo ""
             echo "Please ensure:"
             echo "  1. The issue exists in the .issue repository"
