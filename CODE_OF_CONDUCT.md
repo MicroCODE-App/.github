@@ -90,6 +90,6 @@ This Code of Conduct is adapted from the [Contributor Covenant](https://www.cont
 
 ---
 
-**Note:** This is an internal MicroCODE, Inc. repository. This Code of Conduct applies to all interactions within the MicroCODE App Template organization and its repositories.
+**Note:** This is an internal MicroCODE, Inc. repository. This Code of Conduct applies to all interactions within the MicroCODE App organization and its repositories.
 
 **Last Updated:** 2025-01-XX

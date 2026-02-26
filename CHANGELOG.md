@@ -1,11 +1,11 @@
 # Changelog
 
-All notable changes to the MicroCODE App Template will be documented in this file.
+All notable changes to the MicroCODE App will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## MicroCODE App Template [0.1.0]
+## MicroCODE App [0.1.0]
 
 `January 14, 2026`
 
@@ -68,7 +68,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Applies legacy sail_cc normalization during boat seeding
   - Ensures consistency between API-created and seeded records
 
-## MicroCODE App Template [0.0.5]
+## MicroCODE App [0.0.5]
 
 `December 25, 2025`
 
@@ -92,7 +92,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `DB_PORT` environment variable (not used by MongoDB)
 - `mongo:update` and `sql:update` npm scripts
 
-## MicroCODE App Template [0.0.4]
+## MicroCODE App [0.0.4]
 
 `November 26, 2025`
 
@@ -105,7 +105,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - CODE_OF_CONDUCT.md to establish community guidelines
   - CONTRIBUTING.md to guide contributors on how to contribute effectively
 
-## MicroCODE App Template [0.0.3]
+## MicroCODE App [0.0.3]
 
 `November 23, 2025`
 
@@ -119,7 +119,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed 2FA toggle issue in UI/UX layer of client app
 - Style `Switch` component in client app to match Apple (Green/Gray) colors for On/Off states
 
-## MicroCODE App Template [0.0.2]
+## MicroCODE App [0.0.2]
 
 `November 19, 2025`
 
@@ -137,7 +137,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated all repository remote URLs to new MicroCODE-App organization
 - Updated Developer Setup Guide with new repo names and structure
 
-## MicroCODE App Template [0.0.1]
+## MicroCODE App [0.0.1]
 
 `November 19, 2025`
 
@@ -165,7 +165,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Aligned 'client' and 'mission-control:client' to use the same Tailwind package and input.css
 
-## MicroCODE App Template [0.0.0]
+## MicroCODE App [0.0.0]
 
 `November 17, 2025`
 
@@ -317,7 +317,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-**Note:** This changelog covers the MicroCODE App Template platform.
+**Note:** This changelog covers the MicroCODE App platform.
 Individual applications built on this platform maintain their own changelogs.
 
 [0.0.3]: https://github.com/MicroCODE-App/.github/compare/v0.0.3...HEAD

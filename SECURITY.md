@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-MicroCODE App Template follows semantic versioning (vM.F.p). Security updates are provided for the following versions:
+MicroCODE App follows semantic versioning (vM.F.p). Security updates are provided for the following versions:
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -15,10 +15,10 @@ MicroCODE App Template follows semantic versioning (vM.F.p). Security updates ar
 
 ### How to Report
 
-If you discover a security vulnerability in any MicroCODE App Template repository, please report it responsibly:
+If you discover a security vulnerability in any MicroCODE App repository, please report it responsibly:
 
 1. **Email:** security@mcode.com
-2. **Subject:** `[SECURITY] MicroCODE App Template - [Brief Description]`
+2. **Subject:** `[SECURITY] MicroCODE App - [Brief Description]`
 3. **Include:**
    - Description of the vulnerability
    - Steps to reproduce
@@ -110,7 +110,7 @@ If you discover a security vulnerability in any MicroCODE App Template repositor
 
 ## Security Features
 
-MicroCODE App Template includes the following security features:
+MicroCODE App includes the following security features:
 
 - **Authentication:** Multi-provider authentication with 2FA support
 - **Authorization:** Role-based access control (RBAC) with 7 privilege levels

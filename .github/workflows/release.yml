@@ -1,4 +1,4 @@
-# Release Workflow for MicroCODE App Template
+# Release Workflow for MicroCODE App
 # Creates releases and tags based on semantic versioning
 
 name: Release
@@ -98,7 +98,7 @@ jobs:
 
                       ---
 
-                      **MicroCODE App Template** - Enterprise SaaS Application Platform
+                      **MicroCODE App** - Enterprise SaaS Application Platform
 
                       For support, contact: dev-team@mcode.com
                   draft: false

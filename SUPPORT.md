@@ -2,7 +2,7 @@
 
 ## Getting Help
 
-MicroCODE App Template is an internal platform for MicroCODE, Inc. development teams. This document outlines how to get support for platform-related questions, issues, and feature requests.
+MicroCODE App is an internal platform for MicroCODE, Inc. development teams. This document outlines how to get support for platform-related questions, issues, and feature requests.
 
 ## Support Channels
 

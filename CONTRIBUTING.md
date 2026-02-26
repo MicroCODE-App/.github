@@ -1,6 +1,6 @@
-# Contributing to MicroCODE App Template
+# Contributing to MicroCODE App
 
-Thank you for your interest in contributing to MicroCODE App Template! This document provides guidelines and instructions for contributing to the platform.
+Thank you for your interest in contributing to MicroCODE App! This document provides guidelines and instructions for contributing to the platform.
 
 ## Table of Contents
 
@@ -402,6 +402,6 @@ If you have questions about contributing:
 
 ---
 
-**Thank you for contributing to MicroCODE App Template!**
+**Thank you for contributing to MicroCODE App!**
 
 **Last Updated:** 2025-01-XX
