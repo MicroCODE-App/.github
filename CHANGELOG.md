@@ -5,6 +5,75 @@ All notable changes to the MicroCODE App will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## MicroCODE App [0.8.*]
+
+`March 31, 2026`
+
+### Added
+
+- **Unified Payment Tracking System** (Issue #0077)
+    - New **Season** entity — standalone collection for racing seasons owned by ORG, CLUB, or USER
+    - Season auto-creation on first Stripe payment when no current season exists
+    - Manual payment entry for registrars/masters via Console ACCOUNTS view (cash, checks, notes)
+    - Payment category derivation from Stripe product metadata or name heuristics
+    - Console Season CRUD view with type-specific owner selectors and immutable protection
+    - Client Season Card View (ORG/CLUB read-only, Personal editable)
+    - Dashboard Season stat cards (CLIENT and ADMIN) with navigation
+    - Stacked payment ledger in Console ACCOUNTS view (App + ORG + CLUB payments per season)
+    - Payment status indicators on Client ORG/CLUB business cards
+    - One-season-per-owner-per-period uniqueness enforcement
+    - OA-type-only season generation (ORG type `OA`, CLUB type `oa`)
+
+- **Database Changes**:
+    - New `season` collection (type, state, org_id/club_id/user_id, start/end dates, series_ids)
+    - Extended `payment` model (ver 2): `season_id`, `source`, `notes`, `entity_acronym`, `category` on items
+    - Extended `org` model (ver 2): `season_ids` array
+    - Extended `club` model (ver 3): `season_ids` array, `type` enum expanded to `oa`/`ss`/`social`
+    - Schema upgraders for payment, season, org, and club
+
+- **API Endpoints**:
+    - `GET/POST /api/season` — List and create seasons
+    - `GET/PATCH/DELETE /api/season/:id` — Season CRUD
+    - `GET/PATCH /api/season/personal` — Personal season endpoints
+    - `POST /api/season/resolve` — Resolve/auto-create seasons for payment dialog
+    - `POST /api/payment` — Manual payment entry (admin, `payment.create` scope)
+    - `GET /api/metrics/*` — Now includes `totalSeasons` in response
+
+- **New Shared Helper**:
+    - `.core/helper/season.js` — `getSeasonId()` with auto-creation and `autoCreate` flag
+
+### Changed
+
+- **Payment Model** (`payment.model.js`):
+    - `stripe_payment_intent_id` relaxed from required to optional (supports manual entries)
+    - Added `source` enum (`stripe`, `manual`), `notes`, `entity_acronym` fields
+    - Added `category` field on `items[]` subdocument
+
+- **Console ACCOUNTS View** (`accounts.jsx`):
+    - Added Payments column with stacked category ledger per entity
+    - Added "Paid" stat card, "Latest Payment" column, manual payment dialog
+
+- **Client Billing Invoices** (`invoices.jsx`):
+    - Category column now aggregates from `items[].category` with fallback to payment type
+    - Season name column added
+
+---
+
+## MicroCODE App [0.8.8]
+
+`March 31, 2026`
+
+### Added
+
+- **JSON Viewer server-side proxy fetch** — API endpoint fetches are now proxied through the admin server (`POST /api/tools/fetch-url`), eliminating CORS issues and preventing JWT leakage to third-party APIs; responses are automatically saved to a `fetched/` directory on the server (ISSUE #0075)
+- **Fetched files management API** — three new admin endpoints: `GET /api/tools/fetched` (list), `GET /api/tools/fetched/:filename` (read), `DELETE /api/tools/fetched/:filename` (delete) for managing server-side saved JSON files (ISSUE #0075)
+- **Fetched files browser UI** — new "Fetched" source mode in the Console JSON Viewer with scrollable file list, load-on-click, and per-file delete (ISSUE #0075)
+- **`fetched/` directory** — new runtime directory parallel to `uploads/` for server-side saved API responses, with `.gitkeep` and `.gitignore` patterns
+
+### Changed
+
+- **JSON Viewer API fetch** — `handleFetchApi` in Console now calls `POST /api/tools/fetch-url` instead of direct `axios.get(apiUrl)`, routing all external fetches through the admin server proxy (ISSUE #0075)
+
 ## MicroCODE App [0.1.0]
 
 `January 14, 2026`
