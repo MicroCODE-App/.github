@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Inline Member/Account No. Editing on Business Cards**
+    - Pencil icon inline with Member/Account label on ORG, CLUB, and COMPANY business cards
+    - Any user can edit their own membership number directly from the card (not admin-only)
+    - Dialog pre-populates with current value for easy editing
+    - Uses existing `org.member_no`, `club.member_no`, `company.member_no` locale keys
+    - Italic placeholder styling on form inputs for visual distinction
+
 - **Unified Payment Tracking System** (Issue #0077)
     - New **Season** entity — standalone collection for racing seasons owned by ORG, CLUB, or USER
     - Season auto-creation on first Stripe payment when no current season exists
