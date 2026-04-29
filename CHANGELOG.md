@@ -138,7 +138,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - EntityCard: BOAT entities display flag instead of logo when `sail_cc` present
     - Admin Tables: Added 'Country' flag column, removed boat 'name' column
     - Boat/SV Lists: Display Flag + Sail No. (bold) on line 1, Design (gray) on line 2
-    - Locale Pickers: Dynamic flag rendering using Flag component
+    - Locale Selectors: Dynamic flag rendering using Flag component
 
 - **Seeder** (`server/seed/seeder.js`):
     - Applies legacy sail_cc normalization during boat seeding
