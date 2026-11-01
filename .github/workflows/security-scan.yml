@@ -48,7 +48,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          # {ISSUE#0173:Claude Opus 5.5} -- Node 20 is EOL and in the RCE's affected range; the App runs 22
+          node-version: "22"
           cache: "npm"
           cache-dependency-path: ${{ inputs.working-directory }}/package-lock.json
 
